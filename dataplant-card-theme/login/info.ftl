@@ -30,6 +30,7 @@
             <#elseif (client.baseUrl)?has_content>
             <button class="button is-danger is-outlined is-inverted is-fullwidth">
                 <a href="${client.baseUrl}">${kcSanitize(msg("backToApplication"))?no_esc}</a>
+                </button>
             </#if>
         </#if>
         </div>
