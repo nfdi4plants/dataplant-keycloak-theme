@@ -65,7 +65,7 @@
             </div>
             <div class="block">
               <li>
-                <a href="https://gitlab.nfdi4plants.org/">
+                <a href="https://git.nfdi4plants.org/">
                   DataHUB
                 </a>
               </li>
