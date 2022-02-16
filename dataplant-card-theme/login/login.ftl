@@ -8,14 +8,21 @@
     -->
     <#elseif section = "form">
 
-    
 <section class="section" >
   <div class="container p-4 has-rounded-border has-bg-split-20-darkblue registercard">
     <!--card ui-->
+    <div id="msform">
+    <!--
     <form id="msform" onsubmit="login.disabled = true; return true;" action="${url.loginAction}" method="post">
+    -->
+    <!-- changed line above form to div -->
       <div class="columns">
         <div class="column align-items-top pb-5">
           <div class="container box has-bg-white m-4 p-0">
+          
+          <!-- here -->
+          <form onsubmit="login.disabled = true; return true;" action="${url.loginAction}" method="post">
+          
             <div class="container p-4">
               <h1 class="title is-4 is-darkblue is-uppercase">
                  ${msg("loginAccountTitle")}
@@ -26,6 +33,8 @@
               <div class="spacer"></div>
               <!--input fields-->
               <div class="field">
+              
+              
                 <input class="input is-rounded" type="text" placeholder="${msg("username")}" tabindex="1" name="username" value="${(login.username!'')}" autofocus autocomplete="off" aria-invalid="<#if messagesPerField.existsError('username','password')>true</#if>" />
               </div>
               <div class="field">
@@ -46,7 +55,7 @@
                   <!--button next-->
                   <div class="level-right">
                     <div class="level-item">
-                      <button class="button is-rounded is-link is-fullwidth" style="padding-left: 2rem" (click)="next()">
+                      <button class="button is-rounded is-link is-fullwidth" style="padding-left: 2rem">
                         <span>Log in</span>
                         <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" viewBox="0 0 256 512" style="width: 1em; height: 1em; vertical-align: -.125em; margin-left: 1rem">
                           <path fill="currentColor" d="M118.6 105.4l128 127.1C252.9 239.6 256 247.8 256 255.1s-3.125 16.38-9.375 22.63l-128 127.1c-9.156 9.156-22.91 11.9-34.88 6.943S64 396.9 64 383.1V128c0-12.94 7.781-24.62 19.75-29.58S109.5 96.23 118.6 105.4z" />
@@ -57,6 +66,9 @@
                 </nav>
               </div>
             </div>
+            
+            <!-- until here-->
+            </form>
           </div>
         </div>
         <!--text box-->
@@ -67,8 +79,12 @@
                 Log in with your scientific account  ​
               </h3>
               <div style="height:10px; text-align:left"></div>
-              
-              <#if realm.password && social.providers??>
+             
+
+        
+             
+             
+        <#if realm.password && social.providers??>
             <div class="${properties.kcFormSocialAccountSectionClass!}">
             <!--
                 <h4>${msg("identity-provider-login-label")}</h4>
@@ -80,22 +96,11 @@
                             <figure><img class="pbutton-img" src="${url.resourcesPath}/img/${p.displayName!}.svg" /></figure>
                             <p class="pbutton-text">${p.displayName!}</p>
                         </button>
-
-<!--
-                        <a id="social-${p.alias}" class="${properties.kcFormSocialAccountListButtonClass!} <#if social.providers?size gt 3>${properties.kcFormSocialAccountGridItem!}</#if>"
-                                type="button" href="${p.loginUrl}">
-                            <#if p.iconClasses?has_content>
-                                <i class="${properties.kcCommonLogoIdP!} ${p.iconClasses!}" aria-hidden="true"></i>
-                                <span class="${properties.kcFormSocialAccountNameClass!} kc-social-icon-text">${p.displayName!}</span>
-                            <#else>
-                                <span class="${properties.kcFormSocialAccountNameClass!}">${p.displayName!}</span>
-                            </#if>
-                        </a>
-                        -->
                     </#list>
                 </div>
             </div>
         </#if>
+
         
         <div style="height:10px"></div>
               
@@ -111,10 +116,11 @@
           </div>
         </div>
       </div>
-    </form>
+    </div>
     <!--END card ui-->
   </div>
 
+  
 
 
 </section>
