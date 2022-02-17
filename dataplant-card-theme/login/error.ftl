@@ -21,7 +21,7 @@
                 -->
                     
                 <div class="spacer"></div>
-                    <button class="button is-danger is-outlined is-inverted is-fullwidth">
+                    <button class="button is-info is-outlined is-inverted is-fullwidth">
                         <a id="backToApplication" href="${msg("registration_site")}" style="text-decoration: none">Registration</a>
                     </button>
             <#elseif client?? && client.baseUrl?has_content>
@@ -31,7 +31,7 @@
                 <h1 class="title is-5 is-white is-uppercase">Error</h1>
                 <p class="instruction" style="color:white">${kcSanitize(msg(message.summary))?no_esc}</p>
                     <div class="spacer"></div>
-                    <button class="button is-danger is-outlined is-inverted is-fullwidth">
+                    <button class="button is-info is-outlined is-inverted is-fullwidth">
                         <a id="backToApplication" href="${client.baseUrl}" style="text-decoration: none">${kcSanitize(msg("backToApplication"))?no_esc}</a>
                     </button>
             </#if>

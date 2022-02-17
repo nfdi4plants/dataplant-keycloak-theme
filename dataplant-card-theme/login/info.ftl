@@ -21,14 +21,14 @@
         <#if skipLink??>
         <#else>
             <#if pageRedirectUri?has_content>
-            <button class="button is-danger is-outlined is-inverted is-fullwidth">
+            <button class="button is-info  is-outlined is-inverted is-fullwidth">
             <a href="${pageRedirectUri}">${kcSanitize(msg("backToApplication"))?no_esc}</a></button>
             <#elseif actionUri?has_content>
             
-            <button class="button is-danger is-outlined is-inverted is-fullwidth">
+            <button class="button is-info  is-outlined is-inverted is-fullwidth">
             <a href="${actionUri}" style="text-decoration: none">${kcSanitize(msg("proceedWithAction"))?no_esc}</a></button>
             <#elseif (client.baseUrl)?has_content>
-            <button class="button is-danger is-outlined is-inverted is-fullwidth">
+            <button class="button is-info  is-outlined is-inverted is-fullwidth">
                 <a href="${client.baseUrl}">${kcSanitize(msg("backToApplication"))?no_esc}</a>
                 </button>
             </#if>
