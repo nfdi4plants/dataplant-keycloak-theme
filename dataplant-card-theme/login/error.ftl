@@ -16,7 +16,9 @@
                 <h1 class="title is-5 is-white is-uppercase">We couldn&acute;t find your Account</h1>
                 <p class="instruction" style="color:white">${kcSanitize(msg(message.summary))?no_esc}</p>
                 
+                <!-- testing to force an error text link
                 <p><a id="backToApplication" href="${url.loginAction}">${kcSanitize(msg("logOutAndGoBackToApplication"))?no_esc}</a></p>
+                -->
                     
                 <div class="spacer"></div>
                     <button class="button is-danger is-outlined is-inverted is-fullwidth">
