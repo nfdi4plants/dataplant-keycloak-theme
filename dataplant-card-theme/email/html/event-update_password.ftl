@@ -166,7 +166,7 @@
                                         <tbody>
                                         <tr style="width: 100%;">
                                             <td style="font-family: 'Helvetica Neue',Helvetica,Arial,sans-serif; font-size: 15px; line-height: 1.4; color: #8c8c8c; font-weight: 300; margin: 0; padding: 14px 0;" align="center">
-                                                <p>This is an automatically generated email. Do not reply! </p> <p> If you have any questions about your order, please contact us via support.nfdi4plants.org</p>
+                                                <p>This is an automatically generated email. Do not reply! </p> <p> If you have any questions about your order, please contact us via support.nfdi4plants.org.</p>
                                             </td>
                                         </tr>
                                         </tbody>
