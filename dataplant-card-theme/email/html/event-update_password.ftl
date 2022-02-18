@@ -104,7 +104,7 @@
                                     &nbsp;
                                 </td>
                             </tr>
-                            <tr style="height:40px">
+                            <tr style="height:60px">
                                 <td bgcolor="#2D3E50" color="#2D3E50" style="padding: 5px 30px;">
                                     <table border="0" cellpadding="0" cellspacing="0" width="100%" style="border-collapse: collapse;">
                                         <tr>
