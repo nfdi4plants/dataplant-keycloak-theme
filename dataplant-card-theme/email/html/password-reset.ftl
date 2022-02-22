@@ -55,13 +55,13 @@
                                 </td>
                             </tr>
                             <tr class="main-alert">
-                                <td style="font-family: 'Helvetica Neue',Helvetica,Arial,sans-serif; border-radius: 3px; font-size: 21px; font-weight:600; line-height: 1.3; overflow: hidden; color: #ffffff; padding: 20px;" bgcolor="#4FB3D9" align="center">
+                                <td style="font-family: 'Helvetica Neue',Helvetica,Arial,sans-serif; border-radius: 3px; font-size: 21px; font-weight:600; line-height: 1.3; overflow: hidden; color: #ffffff; padding: 20px;" bgcolor="#FFC000" align="center">
                                     <table class="img" style="border-collapse: collapse; margin: 0 auto;" cellspacing="0" cellpadding="0" border="0">
                                         <tbody>
                                         <tr>
                                             <td style="font-family: 'Helvetica Neue',Helvetica,Arial,sans-serif; color: #ffffff;" valign="middle" align="center">
                                                 <span>
-                                                    ${kcSanitize(msg("eventUpdatePasswordHeaderHtml",event.date, event.ipAddress))?no_esc}
+                                                   ${kcSanitize(msg("passwordResetHeaderHtml",link, linkExpiration, realmName, linkExpirationFormatter(linkExpiration)))?no_esc}
                                                 </span>
                                             </td>
                                         </tr>
@@ -80,7 +80,7 @@
                                                         <tbody>
                                                         <tr style="width: 100%;">
                                                             <td style="font-family: 'Helvetica Neue',Helvetica,Arial,sans-serif; font-size: 15px; line-height: 1.4; color: #8c8c8c; font-weight: 300; margin: 0; padding: 14px 0;" align="center">
-                                                               {kcSanitize(msg("eventUpdatePasswordBodyHtml",event.date, event.ipAddress))?no_esc}
+                                                              ${kcSanitize(msg("passwordResetBodyHtml",link, linkExpiration, realmName, linkExpirationFormatter(linkExpiration)))?no_esc}
                                                             </td>
                                                         </tr>
                                                         </tbody>
@@ -166,7 +166,7 @@
                                         <tbody>
                                         <tr style="width: 100%;">
                                             <td style="font-family: 'Helvetica Neue',Helvetica,Arial,sans-serif; font-size: 15px; line-height: 1.4; color: #8c8c8c; font-weight: 300; margin: 0; padding: 14px 0;" align="center">
-                                                <p>This is an automatically generated email. Do not reply! </p> <p> If you have any questions about your order, please contact us via support.nfdi4plants.org.</p>
+                                                <p>This is an automatically generated email. Do not reply! </p> <p> If you have any questions about your order, please contact us via support.nfdi4plants.org. </p>
                                             </td>
                                         </tr>
                                         </tbody>

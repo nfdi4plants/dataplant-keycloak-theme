@@ -55,7 +55,7 @@
                                 </td>
                             </tr>
                             <tr class="main-alert">
-                                <td style="font-family: 'Helvetica Neue',Helvetica,Arial,sans-serif; border-radius: 3px; font-size: 21px; font-weight:600; line-height: 1.3; overflow: hidden; color: #ffffff; padding: 20px;" bgcolor="#FFC000" align="center">
+                                <td style="font-family: 'Helvetica Neue',Helvetica,Arial,sans-serif; border-radius: 3px; font-size: 21px; font-weight:600; line-height: 1.3; overflow: hidden; color: #ffffff; padding: 20px;" bgcolor="#4FB3D9" align="center">
                                     <table class="img" style="border-collapse: collapse; margin: 0 auto;" cellspacing="0" cellpadding="0" border="0">
                                         <tbody>
                                         <tr>
