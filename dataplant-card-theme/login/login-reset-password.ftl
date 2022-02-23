@@ -76,7 +76,7 @@
           <div class="container m-4 is-white">
             <div class="content has-text-justified">
               <h3 style="color:white; padding-top:1.9em">
-                Log in with your scientific account  ​
+                Reset your password ​
               </h3>
               <div style="height:10px; text-align:left"></div>
                    
@@ -85,10 +85,26 @@
         <div style="height:10px"></div>
               
               <p>
-               Reset your Password if you have forgotten yours.
+              You can reset your password if you have forgotten it. Your DataPLANT account password is used to access the DataPLANT infrastructure.
+              Please enter your email address so that we can send you an email.
+             </p>
+              <p>
+               If you don’t get an email:
+                <ul>
+                <li>
+                Check your Spam or Bulk Mail folders.
+                </li>
+                <li>
+                Add noreply@nfdi4plants.org to your address book.
+                </li>
+                <li>
+                Contact us at <a href ="https://support.nfdi4plants.org">support.nfdi4plants.org</a>
+                </li>
+                </ul>
                <!--
                <a href="${msg("registration_site")}" style="color:green">Link my account.​​</a>
                -->
+               </p>
             </div>
           </div>
         </div>
