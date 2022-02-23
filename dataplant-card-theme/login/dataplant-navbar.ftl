@@ -11,7 +11,7 @@
       </div>
       <div id="navMenu" class="navbar-menu has-bg-darkblue">
         <div class="navbar-start is-justify-content-center is-flex-grow-1">
-          <a class="navbar-item is-active smooth-hover" href="/">
+          <a class="navbar-item is-active smooth-hover" href="https://nfdi4plants.org">
             Home
           </a>
           <a class="navbar-item" href="https://nfdi4plants.org/news.html">
