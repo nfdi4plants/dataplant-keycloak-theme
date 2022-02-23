@@ -22,7 +22,7 @@
           
             <div class="container p-4">
               <h1 class="title is-4 is-darkblue is-uppercase">
-                 ${msg("loginAccountTitle")}
+                 ${msg("emailForgotTitle")}
               </h1>
               <h1 class="title is-4 is-darkblue-lighter-20">
                 Reset your DataPLANT account password
