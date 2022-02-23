@@ -7,6 +7,8 @@
     <meta charset="utf-8">
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
     <meta name="robots" content="noindex, nofollow">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
     <!-- adding fontawesome fonts -->
     <script defer src="${url.resourcesPath}/js/all.js"></script> <!--load all styles -->
 
