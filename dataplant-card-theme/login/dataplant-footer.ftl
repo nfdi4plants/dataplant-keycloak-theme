@@ -30,7 +30,7 @@
           <ul>
             <div class="block">
               <li>
-                <a href="/">
+                <a href="https://nfdi4plants.org">
                   Home
                 </a>
               </li>
