@@ -8,10 +8,7 @@
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
     <meta name="robots" content="noindex, nofollow">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-
-    <!-- adding fontawesome fonts -->
-    <script defer src="${url.resourcesPath}/js/all.js"></script> <!--load all styles -->
-
+  
     <#if properties.meta?has_content>
         <#list properties.meta?split(' ') as meta>
             <meta name="${meta?split('==')[0]}" content="${meta?split('==')[1]}"/>
@@ -42,7 +39,7 @@
 </head>
 
 <body class="${properties.kcBodyClass!}">
-  <#include "dataplant-navbar.ftl">
+  <nfdi-navbar></nfdi-navbar>
 <div class="${properties.kcLoginClass!}">
     <div id="kc-header" class="${properties.kcHeaderClass!}">
     <!--
@@ -157,7 +154,10 @@
 
     </div>
   </div>
+  <!--
     <#include "dataplant-footer.ftl">
+  -->
+  <nfdi-footer></nfdi-footer>
 </body>
 </html>
 </#macro>
