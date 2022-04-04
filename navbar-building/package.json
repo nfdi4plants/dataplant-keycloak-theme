@@ -1,0 +1,10 @@
+{
+  "name": "nfdi4plantsgithub.io",
+  "dependencies": {
+    "@nfdi4plants/web-components": "^0.3.0"
+  },
+  "devDependencies": {
+    "@rollup/plugin-node-resolve": "^13.1.3",
+    "rollup": "^2.70.1"
+  }
+}
