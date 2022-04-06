@@ -1,7 +1,7 @@
 {
   "name": "nfdi4plantsgithub.io",
   "dependencies": {
-    "@nfdi4plants/web-components": "^0.3.0"
+    "@nfdi4plants/web-components": "latest"
   },
   "devDependencies": {
     "@rollup/plugin-node-resolve": "^13.1.3",
