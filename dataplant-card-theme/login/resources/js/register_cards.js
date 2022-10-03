@@ -1,5 +1,5 @@
-let showing = [1, 0, 0];
-let questions = ['card1', 'card2', 'card3'];
+let showing = [1, 0, 0, 0];
+let questions = ['card1', 'card2', 'card3', 'card4'];
 console.log("loaded reg cards.js")
 function next() {
     console.log("clicked next")
