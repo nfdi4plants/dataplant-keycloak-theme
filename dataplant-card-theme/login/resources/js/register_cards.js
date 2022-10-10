@@ -77,7 +77,7 @@ function next() {
                         "none";
                 }
 
-                if (!email || !firstname || !lastname){
+                if (!email || !firstname || !lastname || validateEmail(email) == false){
                     return false;
                 }
 
@@ -231,6 +231,7 @@ function next() {
             if (questions[i] == 'card4') {
                 console.log("is card4")
                 let consortium = document.getElementById("consortium").value;
+                let research = document.getElementById("research").value;
                 let role = document.getElementById("role").value;
 
 
@@ -242,6 +243,17 @@ function next() {
                 }
                 else {
                     document.getElementById("form-error-consortium").style.display =
+                        "none";
+                }
+
+                if (research == "") {
+                    console.log("1")
+                    document.getElementById("form-error-research").style.display =
+                        "block";
+                    // return false;
+                }
+                else {
+                    document.getElementById("form-error-research").style.display =
                         "none";
                 }
 
@@ -257,7 +269,7 @@ function next() {
                         "none";
                 }
 
-                if (!role || !consortium){
+                if (!role || !consortium || !research){
                     return false;
                 }
 
@@ -282,6 +294,11 @@ function next() {
     }
 }
 
+// function previous(){
+//
+// }
+
+
 function previous() {
     console.log("clicked prev")
     var qElems = [];
@@ -300,8 +317,9 @@ function previous() {
                 qElems[0].style.display = 'block';
                 showing[0] = 1;
             } else {
-                qElems[i + 1].style.display = 'block';
-                showing[i + 1] = 1;
+                console.log("prev pressed " +i)
+                qElems[i - 1].style.display = 'block';
+                showing[i - 1] = 1;
             }
             break;
         }

@@ -39,6 +39,24 @@ padding-top: 150px;
 }
 
 .contact-form-error {
-  color: red;
+  color: #c21f3a;
   display: none;
+  font-size: 0.9rem;
 }
+
+.myprogress::-moz-progress-bar {
+  background: #1FC2A7;
+}
+
+.myprogress::-webkit-progress-value {
+  background: #1FC2A7;
+}
+
+.myprogress {
+  color: #1FC2A7;
+  border-radius: unset;
+  border-bottom-left-radius: 5px;
+  border-bottom-right-radius: 5px;
+
+}
+

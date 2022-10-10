@@ -6548,7 +6548,8 @@ button.dropdown-item {
 
 .level {
   /*align-items: center;*/
-  justify-content: flex-end;
+  /*justify-content: flex-end;*/
+  justify-content: space-between;
 }
 
   .level code {
