@@ -44,6 +44,8 @@
                                                            value="${(register.formData.email!'')}" autocomplete="email"
                                                            aria-invalid="<#if messagesPerField.existsError('email')>true</#if>"
                                                     />
+                                                    <p id="form-error-email" class="contact-form-error">Email is required</p>
+                                                    <p id="form-error-email-valid" class="contact-form-error">Email is not valid</p>
 
                                                     <#if messagesPerField.existsError('email')>
                                                         <span id="input-error-email"
@@ -70,6 +72,7 @@
                                                                aria-invalid="<#if messagesPerField.existsError('username')>true</#if>"
                                                         />
 
+
                                                         <#if messagesPerField.existsError('username')>
                                                             <span id="input-error-username"
                                                                   class="${properties.kcInputErrorMessageClass!}"
@@ -94,6 +97,10 @@
                                                            aria-invalid="<#if messagesPerField.existsError('firstName')>true</#if>"
                                                     />
 
+
+                                                    <p id="form-error-firstname" class="contact-form-error">First name is required</p>
+
+
                                                     <#if messagesPerField.existsError('firstName')>
                                                         <span id="input-error-firstname"
                                                               class="${properties.kcInputErrorMessageClass!}"
@@ -115,6 +122,8 @@
                                                            value="${(register.formData.lastName!'')}"
                                                            aria-invalid="<#if messagesPerField.existsError('lastName')>true</#if>"
                                                     />
+
+                                                    <p id="form-error-lastname" class="contact-form-error">Last name is required</p>
 
                                                     <#if messagesPerField.existsError('lastName')>
                                                         <span id="input-error-lastname"
@@ -196,6 +205,7 @@
                                                            name="user.attributes.institution"
                                                            value="${(register.formData['user.attributes.institution']!'')}"
                                                            aria-invalid="<#if messagesPerField.existsError('institution')>true</#if>"/>
+                                                    <p id="form-error-institution" class="contact-form-error">Last name is required</p>
                                                 </div>
                                             </div>
                                         </div>
@@ -209,6 +219,7 @@
                                                            name="user.attributes.department"
                                                            value="${(register.formData['user.attributes.department']!'')}"
                                                            aria-invalid="<#if messagesPerField.existsError('department')>true</#if>"/>
+                                                    <p id="form-error-department" class="contact-form-error">Last name is required</p>
                                                 </div>
                                             </div>
                                         </div>
@@ -222,6 +233,7 @@
                                                            name="user.attributes.country"
                                                            value="${(register.formData['user.attributes.country']!'')}"
                                                            aria-invalid="<#if messagesPerField.existsError('country')>true</#if>"/>
+                                                    <p id="form-error-country" class="contact-form-error">Last name is required</p>
                                                 </div>
                                             </div>
                                         </div>
@@ -235,6 +247,7 @@
                                                            name="user.attributes.state"
                                                            value="${(register.formData['user.attributes.state']!'')}"
                                                            aria-invalid="<#if messagesPerField.existsError('state')>true</#if>"/>
+                                                    <p id="form-error-state" class="contact-form-error">Last name is required</p>
                                                 </div>
                                             </div>
                                         </div>
@@ -248,6 +261,7 @@
                                                            name="user.attributes.zipcode"
                                                            value="${(register.formData['user.attributes.zipcode']!'')}"
                                                            aria-invalid="<#if messagesPerField.existsError('zipcode')>true</#if>"/>
+                                                    <p id="form-error-zipcode" class="contact-form-error">Last name is required</p>
                                                 </div>
                                             </div>
                                         </div>
@@ -261,6 +275,7 @@
                                                            name="user.attributes.city"
                                                            value="${(register.formData['user.attributes.city']!'')}"
                                                            aria-invalid="<#if messagesPerField.existsError('city')>true</#if>"/>
+                                                    <p id="form-error-city" class="contact-form-error">Last name is required</p>
                                                 </div>
                                             </div>
                                         </div>
@@ -274,6 +289,7 @@
                                                            name="user.attributes.address"
                                                            value="${(register.formData['user.attributes.address']!'')}"
                                                            aria-invalid="<#if messagesPerField.existsError('address')>true</#if>"/>
+                                                    <p id="form-error-address" class="contact-form-error">Last name is required</p>
                                                 </div>
                                             </div>
                                         </div>
@@ -404,6 +420,8 @@
                                                            autocomplete="new-password"
                                                            aria-invalid="<#if messagesPerField.existsError('password','password-confirm')>true</#if>"
                                                     />
+                                                    <p id="form-error-password" class="contact-form-error">Password is required</p>
+
                                                     <#if messagesPerField.existsError('password')>
                                                         <span id="input-error-password"
                                                               class="${properties.kcInputErrorMessageClass!}"
@@ -424,6 +442,8 @@
                                                            autocomplete="new-password"
                                                            aria-invalid="<#if messagesPerField.existsError('password-confirm')>true</#if>"
                                                     />
+                                                    <p id="form-error-password-confirm" class="contact-form-error">Password Confirmation is required</p>
+                                                    <p id="form-error-password-match" class="contact-form-error">Password does not match</p>
                                                     <#if messagesPerField.existsError('password-confirm')>
                                                         <span id="input-error-password-confirm"
                                                               class="${properties.kcInputErrorMessageClass!}"
@@ -565,11 +585,13 @@
                                                 <div class="${properties.kcInputWrapperClass!}">
                                                     <input type="text"
                                                            class="${properties.kcInputClass!} input is-rounded"
+                                                           id="consortium"
                                                            id="user.attributes.affiliation"
                                                            placeholder="Project/consortium" title="Project/consortium"
                                                            name="user.attributes.affiliation"
                                                            value="${(register.formData['user.attributes.affiliation']!'')}"
                                                            aria-invalid="<#if messagesPerField.existsError('affiliation')>true</#if>"/>
+                                                    <p id="form-error-consortium" class="contact-form-error">Project/Consortium is required</p>
                                                 </div>
                                             </div>
                                         </div>
@@ -594,16 +616,21 @@
 
                                         <div class="field">
                                             <div class="select is-fullwidth is-rounded">
-                                                <select (change)="changeRole($event)" formControlName="roleName"
+                                                <select id="role" (change)="changeRole($event)" formControlName="roleName"
                                                         required>
                                                     <option value="">Choose your Role in DataPLANT</option>
-                                                    <option *ngFor="let role of Role" [ngValue]="role">{{role}}</option>
+                                                    <option value="Data Steward">Data Steward</option>
+                                                    <option value="Developer">Developer</option>
+                                                    <option value="Member">Member</option>
+                                                    <option value="Guest">Guest</option>
                                                 </select>
                                             </div>
                                             <div *ngIf="submitted && affiliationDetails.controls.research.errors"
                                                  class="help is-danger">
                                                 <p *ngIf="affiliations.research.errors?.required">Selection of role is
                                                     required</p>
+                                                <p id="form-error-role" class="contact-form-error">Selection of role is required</p>
+
                                             </div>
                                         </div>
                                         <!--previous && next buttons-->
@@ -628,7 +655,7 @@
                                                 <div class="level-right">
                                                     <div class="level-item">
                                                         <button class="${properties.kcButtonClass!} ${properties.kcButtonPrimaryClass!} ${properties.kcButtonBlockClass!} ${properties.kcButtonLargeClass!}
-                                                        button is-rounded is-link is-fullwidth" style="padding-left: 1.5rem" type="submit" value="${msg("doRegister")}"/>
+                                                        button is-rounded is-link is-fullwidth" style="padding-left: 1.5rem" type="submit"  (click)="next()" value="${msg("doRegister")}"/>
                                                             <span>Register</span>
 <#--                                                            <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" viewBox="0 0 256 512" style="width: 1em; height: 1em; vertical-align: -.125em; margin-left: 1rem">-->
 <#--                                                                <path fill="currentColor" d="M118.6 105.4l128 127.1C252.9 239.6 256 247.8 256 255.1s-3.125 16.38-9.375 22.63l-128 127.1c-9.156 9.156-22.91 11.9-34.88 6.943S64 396.9 64 383.1V128c0-12.94 7.781-24.62 19.75-29.58S109.5 96.23 118.6 105.4z" />-->

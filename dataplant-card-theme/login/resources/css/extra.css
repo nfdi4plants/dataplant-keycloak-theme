@@ -37,3 +37,8 @@ padding-top: 150px;
   background-color: #2d3e50;
 }
 }
+
+.contact-form-error {
+  color: red;
+  display: none;
+}
