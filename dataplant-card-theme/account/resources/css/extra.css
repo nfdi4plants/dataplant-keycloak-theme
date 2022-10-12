@@ -1,0 +1,62 @@
+ 
+#kc-content-wrapper {
+padding-bottom: 100px;
+}
+
+.section {
+padding-top: 150px;
+}
+
+
+@media only screen and (max-width: 768px) {
+
+  .has-rounded-border {
+   border-radius: 0px;
+}
+
+.column {
+  padding:0rem;
+
+}
+
+.m-4 {
+  margin: 0.2rem;
+}
+
+.p-4 {
+  padding:0.2rem;
+}
+
+.section {
+  padding: 2.5rem 0rem 0rem;
+}
+
+
+#kc-content-wrapper {
+  padding-bottom: 30px;
+  background-color: #2d3e50;
+}
+}
+
+.contact-form-error {
+  color: #c21f3a;
+  display: none;
+  font-size: 0.9rem;
+}
+
+.myprogress::-moz-progress-bar {
+  background: #1FC2A7;
+}
+
+.myprogress::-webkit-progress-value {
+  background: #1FC2A7;
+}
+
+.myprogress {
+  color: #1FC2A7;
+  border-radius: unset;
+  border-bottom-left-radius: 5px;
+  border-bottom-right-radius: 5px;
+
+}
+

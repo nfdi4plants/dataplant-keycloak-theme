@@ -1,7 +1,7 @@
 <#import "template.ftl" as layout>
 <@layout.emailLayout>
-    ${kcSanitize(msg("emailVerificationBodyHtml",link, linkExpiration, realmName, linkExpirationFormatter(linkExpiration)))?no_esc}
-</@layout.emailLayout>
+<#--    ${kcSanitize(msg("emailVerificationBodyHtml",link, linkExpiration, realmName, linkExpirationFormatter(linkExpiration)))?no_esc}-->
+<#--ddd-->
 
 
 <!DOCTYPE html
@@ -84,6 +84,7 @@ PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD
                                                     <tr style="width: 100%;">
                                                         <td style="font-family: 'Helvetica Neue',Helvetica,Arial,sans-serif; font-size: 15px; line-height: 1.4; color: #8c8c8c; font-weight: 300; margin: 0; padding: 14px 0;" align="center">
                                                             ${kcSanitize(msg("emailVerificationBodyHtml",link, linkExpiration, realmName, linkExpirationFormatter(linkExpiration)))?no_esc}
+<#--                                                            ${kcSanitize(msg("emailVerificationBodyHtml",msg("http://127.0.0.1:8080/realms/test/account/#/security/linked-accounts"), linkExpiration, realmName, linkExpirationFormatter(linkExpiration)))?no_esc}-->
                                                         </td>
                                                     </tr>
                                                     </tbody>
@@ -194,3 +195,4 @@ PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD
 </body>
 
 </html>
+</@layout.emailLayout>
