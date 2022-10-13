@@ -128,6 +128,17 @@
                                                value="${(account.lastName!'')}"/>
                                     </div>
 
+                                    <div class="field">
+
+                                        <div class="col-sm-2 col-md-2">
+                                            <label for="role" class="control-label">Role</label> <span
+                                                    class="required">*</span>
+                                        </div>
+                                        <input class="form-control input is-rounded" type="text" placeholder="Role"
+                                               id="role" name="role"
+                                               value="${(account.attributes.role!'')}"/>
+                                    </div>
+
                                     <!--buttons-->
                                     <div class="field" style="margin-top: 2rem; margin-bottom: 1rem">
                                         <nav class="level">

@@ -79,3 +79,6 @@ padding-bottom: 100px;
   flex-direction: column;
 }
 
+.text-centered {
+  text-align:center;
+}

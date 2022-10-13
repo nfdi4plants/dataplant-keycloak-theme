@@ -100,7 +100,8 @@
             <input type="hidden" id="stateChecker" name="stateChecker" value="${stateChecker}">
             <div class="form-group">
                 <div class="col-sm-2 col-md-2">
-                    <label for="totp" class="control-label">${msg("authenticatorCode")}</label> <span class="required">*</span>
+                    <label for="totp" class="control-label">${msg("authenticatorCode")}</label> <span
+                            class="required">*</span>
                 </div>
 
                 <div class="col-sm-10 col-md-10">
@@ -113,7 +114,9 @@
 
             <div class="form-group" ${messagesPerField.printIfExists('userLabel',properties.kcFormGroupErrorClass!)}">
             <div class="col-sm-2 col-md-2">
-                <label for="userLabel" class="control-label">${msg("totpDeviceName")}</label> <#if totp.otpCredentials?size gte 1><span class="required">*</span></#if>
+                <label for="userLabel"
+                       class="control-label">${msg("totpDeviceName")}</label> <#if totp.otpCredentials?size gte 1><span
+                        class="required">*</span></#if>
             </div>
             <div class="col-sm-10 col-md-10">
                 <input type="text" class="form-control" id="userLabel" name="userLabel" autocomplete="off">
@@ -135,4 +138,188 @@
             </div>
         </form>
     </#if>
+
+    <section class="section">
+        <div class="container p-4 has-rounded-border has-bg-split-20-darkblue registercard">
+            <div id="msform">
+                <div class="columns">
+                    <div class="column align-items-top pb-5">
+                        <div class="container box has-bg-white m-4 p-0">
+                            <form action="${url.totpUrl}" method="post">
+
+                                <#--                                <input type="text" id="username" name="username" value="${(account.username!'')}" autocomplete="username" readonly="readonly" style="display:none;">-->
+
+
+                                <#--                                <#if password.passwordSet>-->
+                                <#--                                    <div class="form-group">-->
+                                <#--                                        <div class="col-sm-2 col-md-2">-->
+                                <#--                                            <label for="password" class="control-label">${msg("password")}</label>-->
+                                <#--                                        </div>-->
+
+                                <#--                                        <div class="col-sm-10 col-md-10">-->
+                                <#--                                            <input type="password" class="form-control" id="password" name="password" autofocus autocomplete="current-password">-->
+                                <#--                                        </div>-->
+                                <#--                                    </div>-->
+                                <#--                                </#if>-->
+
+                                <input type="hidden" id="stateChecker" name="stateChecker" value="${stateChecker}">
+
+                                <div class="container p-4">
+                                    <h1 class="title is-4 is-darkblue is-uppercase"></h1>
+                                    <h1 class="title is-4 is-darkblue-lighter-20">
+                                        Change Password
+                                    </h1>
+                                    <#--                                    <div class="spacer"></div>-->
+                                    <!--input fields-->
+
+
+                                    <#if mode?? && mode = "manual">
+                                        <li>
+                                            <p>${msg("totpManualStep2")}</p>
+                                            <p><span id="kc-totp-secret-key">${totp.totpSecretEncoded}</span></p>
+                                            <p><a href="${totp.qrUrl}" id="mode-barcode">${msg("totpScanBarcode")}</a>
+                                            </p>
+                                        </li>
+                                        <li>
+                                            <p>${msg("totpManualStep3")}</p>
+                                            <ul>
+                                                <li id="kc-totp-type">${msg("totpType")}
+                                                    : ${msg("totp." + totp.policy.type)}</li>
+                                                <li id="kc-totp-algorithm">${msg("totpAlgorithm")}
+                                                    : ${totp.policy.getAlgorithmKey()}</li>
+                                                <li id="kc-totp-digits">${msg("totpDigits")}: ${totp.policy.digits}</li>
+                                                <#if totp.policy.type = "totp">
+                                                    <li id="kc-totp-period">${msg("totpInterval")}
+                                                        : ${totp.policy.period}</li>
+                                                <#elseif totp.policy.type = "hotp">
+                                                    <li id="kc-totp-counter">${msg("totpCounter")}
+                                                        : ${totp.policy.initialCounter}</li>
+                                                </#if>
+                                            </ul>
+                                        </li>
+                                    <#else>
+                                        <li>
+                                            <p>${msg("totpStep2")}</p>
+                                            <p class="text-centered"><img src="data:image/png;base64, ${totp.totpSecretQrCode}"
+                                                    alt="Figure: Barcode"></p>
+                                            <p><a href="${totp.manualUrl}"
+                                                  id="mode-manual">${msg("totpUnableToScan")}</a></p>
+                                        </li>
+                                    </#if>
+
+                                    <div class="spacer"></div>
+
+                                    <div class="field">
+
+                                        <div class="col-sm-2 col-md-2">
+                                            <label for="totp" class="control-label">${msg("authenticatorCode")}</label>
+                                            <span class="required">*</span>
+                                        </div>
+
+                                        <input type="text" class="form-control input is-rounded" id="totp" name="totp"
+                                               autocomplete="off" autofocus>
+                                        <input type="hidden" id="totpSecret" name="totpSecret"
+                                               value="${totp.totpSecret}"/>
+
+                                    </div>
+                                    <div class="field">
+
+                                        <div class="col-sm-2 col-md-2">
+                                            <label for="userLabel"
+                                                   class="control-label">${msg("totpDeviceName")}</label> <#if totp.otpCredentials?size gte 1>
+                                                <span class="required">*</span></#if>
+                                        </div>
+                                        <input type="text" class="form-control input is-rounded" id="userLabel"
+                                               name="userLabel" autocomplete="off">
+                                    </div>
+
+                                    <!--buttons-->
+                                    <div class="field" style="margin-top: 2rem; margin-bottom: 1rem">
+                                        <nav class="level">
+                                            <div class="level-left">
+
+                                            </div>
+                                            <!--button next-->
+                                            <div class="level-right">
+                                                <div class="level-item">
+                                                    <button class="button is-rounded is-link is-fullwidth" value="Save"
+                                                            type="submit" name="submitAction" id="saveTOTPBtn"
+                                                            style="padding-left: 2rem">
+                                                        <span>${msg("doSave")}</span>
+                                                        <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true"
+                                                             focusable="false" viewBox="0 0 256 512"
+                                                             style="width: 1em; height: 1em; vertical-align: -.125em; margin-left: 1rem">
+                                                            <path fill="currentColor"
+                                                                  d="M118.6 105.4l128 127.1C252.9 239.6 256 247.8 256 255.1s-3.125 16.38-9.375 22.63l-128 127.1c-9.156 9.156-22.91 11.9-34.88 6.943S64 396.9 64 383.1V128c0-12.94 7.781-24.62 19.75-29.58S109.5 96.23 118.6 105.4z"/>
+                                                        </svg>
+                                                    </button>
+                                                </div>
+                                            </div>
+                                        </nav>
+                                    </div>
+                                </div>
+
+                            </form>
+                        </div>
+                    </div>
+                    <!--text box-->
+                    <div class="column align-items-center">
+                        <div class="container m-4 is-white">
+                            <div class="content has-text-justified">
+                                <h3 style="color:white; padding-top:1.9em">
+                                    Configure Authenticator
+                                </h3>
+                                <div style="height:10px; text-align:left"></div>
+
+                                <div style="height:10px"></div>
+
+                                <p>
+                                    Change your current password here. To set a new password your current password has
+                                    to be entered.
+                                </p>
+
+                                <p>
+
+                                    <li>
+                                <p>${msg("totpManualStep3")}</p>
+                                <ul>
+                                    <li id="kc-totp-type">${msg("totpType")}: ${msg("totp." + totp.policy.type)}</li>
+                                    <li id="kc-totp-algorithm">${msg("totpAlgorithm")}
+                                        : ${totp.policy.getAlgorithmKey()}</li>
+                                    <li id="kc-totp-digits">${msg("totpDigits")}: ${totp.policy.digits}</li>
+                                    <#if totp.policy.type = "totp">
+                                        <li id="kc-totp-period">${msg("totpInterval")}: ${totp.policy.period}</li>
+                                    <#elseif totp.policy.type = "hotp">
+                                        <li id="kc-totp-counter">${msg("totpCounter")}
+                                            : ${totp.policy.initialCounter}</li>
+                                    </#if>
+                                </ul>
+                                </li>
+
+                                </p>
+
+                                <p>
+
+                                    <#list totp.policy.supportedApplications as app>
+                                <li>${app}</li>
+                                </#list>
+
+                                </p>
+                                <p>
+
+                                    <li>
+                                <p>${msg("totpStep3")}</p>
+                                <p>${msg("totpStep3DeviceName")}</p>
+                                </li>
+
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!--END card ui-->
+        </div>
+    </section>
+
 </@layout.mainLayout>
