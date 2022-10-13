@@ -102,7 +102,7 @@
                                         </div>
                                         <input class="form-control input is-rounded" type="text" placeholder="email"
                                                id="email" name="email"
-                                               value="${(account.email!'')}" disabled/>
+                                               value="${(account.email!'')}" />
 
                                     </div>
                                     <div class="field">

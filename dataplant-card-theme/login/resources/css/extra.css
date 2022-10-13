@@ -60,3 +60,6 @@ padding-top: 150px;
 
 }
 
+.button-area {
+  display: flex;
+}
