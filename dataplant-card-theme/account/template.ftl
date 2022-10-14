@@ -102,6 +102,7 @@
             <li id="applications-tab" class="tab <#if active=='applications'>active</#if>"><a href="${url.applicationsUrl}">${msg("applications")}</a></li>
             <#if features.log><li  id="log-tab" class="tab <#if active=='log'>active</#if>"><a href="${url.logUrl}">${msg("log")}</a></li></#if>
             <#if realm.userManagedAccessAllowed && features.authorization><li  id="auth-tab" class="tab <#if active=='authorization'>active</#if>"><a href="${url.resourceUrl}">${msg("myResources")}</a></li></#if>
+            <li><a href="${url.getLogoutUrl()}">${msg("doSignOut")}</a></li>
         </ul>
     </div>
 

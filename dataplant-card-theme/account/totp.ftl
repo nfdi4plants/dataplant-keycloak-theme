@@ -12,134 +12,180 @@
 <#--        </#if>-->
 <#--    </div>-->
 
-    <#if totp.enabled>
-        <table class="table table-bordered table-striped">
-            <thead>
-            <#if totp.otpCredentials?size gt 1>
-                <tr>
-                    <th colspan="4">${msg("configureAuthenticators")}</th>
-                </tr>
-            <#else>
-                <tr>
-                    <th colspan="3">${msg("configureAuthenticators")}</th>
-                </tr>
-            </#if>
-            </thead>
-            <tbody>
-            <#list totp.otpCredentials as credential>
-                <tr>
-                    <td class="provider">${msg("mobile")}</td>
-                    <#if totp.otpCredentials?size gt 1>
-                        <td class="provider">${credential.id}</td>
-                    </#if>
-                    <td class="provider">${credential.userLabel!}</td>
-                    <td class="action">
-                        <form action="${url.totpUrl}" method="post" class="form-inline">
-                            <input type="hidden" id="stateChecker" name="stateChecker" value="${stateChecker}">
-                            <input type="hidden" id="submitAction" name="submitAction" value="Delete">
-                            <input type="hidden" id="credentialId" name="credentialId" value="${credential.id}">
-                            <button id="remove-mobile" class="btn btn-default">
-                                <i class="pficon pficon-delete"></i>
-                            </button>
-                        </form>
-                    </td>
-                </tr>
-            </#list>
-            </tbody>
-        </table>
-    <#else>
+<#--    <#if totp.enabled>-->
+<#--        <table class="table table-bordered table-striped">-->
+<#--            <thead>-->
+<#--            <#if totp.otpCredentials?size gt 1>-->
+<#--                <tr>-->
+<#--                    <th colspan="4">${msg("configureAuthenticators")}</th>-->
+<#--                </tr>-->
+<#--            <#else>-->
+<#--                <tr>-->
+<#--                    <th colspan="3">${msg("configureAuthenticators")}</th>-->
+<#--                </tr>-->
+<#--            </#if>-->
+<#--            </thead>-->
+<#--            <tbody>-->
+<#--            <#list totp.otpCredentials as credential>-->
+<#--                <tr>-->
+<#--                    <td class="provider">${msg("mobile")}</td>-->
+<#--                    <#if totp.otpCredentials?size gt 1>-->
+<#--                        <td class="provider">${credential.id}</td>-->
+<#--                    </#if>-->
+<#--                    <td class="provider">${credential.userLabel!}</td>-->
+<#--                    <td class="action">-->
+<#--                        <form action="${url.totpUrl}" method="post" class="form-inline">-->
+<#--                            <input type="hidden" id="stateChecker" name="stateChecker" value="${stateChecker}">-->
+<#--                            <input type="hidden" id="submitAction" name="submitAction" value="Delete">-->
+<#--                            <input type="hidden" id="credentialId" name="credentialId" value="${credential.id}">-->
+<#--                            <button id="remove-mobile" class="btn btn-default">-->
+<#--                                <i class="pficon pficon-delete"></i>-->
+<#--                            </button>-->
+<#--                        </form>-->
+<#--                    </td>-->
+<#--                </tr>-->
+<#--            </#list>-->
+<#--            </tbody>-->
+<#--        </table>-->
+<#--    <#else>-->
 
-        <hr/>
+<#--        <hr/>-->
 
-        <ol>
-            <li>
-                <p>${msg("totpStep1")}</p>
+<#--        <ol>-->
+<#--            <li>-->
+<#--                <p>${msg("totpStep1")}</p>-->
 
-                <ul>
-                    <#list totp.policy.supportedApplications as app>
-                        <li>${app}</li>
-                    </#list>
-                </ul>
-            </li>
+<#--                <ul>-->
+<#--                    <#list totp.policy.supportedApplications as app>-->
+<#--                        <li>${app}</li>-->
+<#--                    </#list>-->
+<#--                </ul>-->
+<#--            </li>-->
 
-            <#if mode?? && mode = "manual">
-                <li>
-                    <p>${msg("totpManualStep2")}</p>
-                    <p><span id="kc-totp-secret-key">${totp.totpSecretEncoded}</span></p>
-                    <p><a href="${totp.qrUrl}" id="mode-barcode">${msg("totpScanBarcode")}</a></p>
-                </li>
-                <li>
-                    <p>${msg("totpManualStep3")}</p>
-                    <ul>
-                        <li id="kc-totp-type">${msg("totpType")}: ${msg("totp." + totp.policy.type)}</li>
-                        <li id="kc-totp-algorithm">${msg("totpAlgorithm")}: ${totp.policy.getAlgorithmKey()}</li>
-                        <li id="kc-totp-digits">${msg("totpDigits")}: ${totp.policy.digits}</li>
-                        <#if totp.policy.type = "totp">
-                            <li id="kc-totp-period">${msg("totpInterval")}: ${totp.policy.period}</li>
-                        <#elseif totp.policy.type = "hotp">
-                            <li id="kc-totp-counter">${msg("totpCounter")}: ${totp.policy.initialCounter}</li>
-                        </#if>
-                    </ul>
-                </li>
-            <#else>
-                <li>
-                    <p>${msg("totpStep2")}</p>
-                    <p><img src="data:image/png;base64, ${totp.totpSecretQrCode}" alt="Figure: Barcode"></p>
-                    <p><a href="${totp.manualUrl}" id="mode-manual">${msg("totpUnableToScan")}</a></p>
-                </li>
-            </#if>
-            <li>
-                <p>${msg("totpStep3")}</p>
-                <p>${msg("totpStep3DeviceName")}</p>
-            </li>
-        </ol>
+<#--            <#if mode?? && mode = "manual">-->
+<#--                <li>-->
+<#--                    <p>${msg("totpManualStep2")}</p>-->
+<#--                    <p><span id="kc-totp-secret-key">${totp.totpSecretEncoded}</span></p>-->
+<#--                    <p><a href="${totp.qrUrl}" id="mode-barcode">${msg("totpScanBarcode")}</a></p>-->
+<#--                </li>-->
+<#--                <li>-->
+<#--                    <p>${msg("totpManualStep3")}</p>-->
+<#--                    <ul>-->
+<#--                        <li id="kc-totp-type">${msg("totpType")}: ${msg("totp." + totp.policy.type)}</li>-->
+<#--                        <li id="kc-totp-algorithm">${msg("totpAlgorithm")}: ${totp.policy.getAlgorithmKey()}</li>-->
+<#--                        <li id="kc-totp-digits">${msg("totpDigits")}: ${totp.policy.digits}</li>-->
+<#--                        <#if totp.policy.type = "totp">-->
+<#--                            <li id="kc-totp-period">${msg("totpInterval")}: ${totp.policy.period}</li>-->
+<#--                        <#elseif totp.policy.type = "hotp">-->
+<#--                            <li id="kc-totp-counter">${msg("totpCounter")}: ${totp.policy.initialCounter}</li>-->
+<#--                        </#if>-->
+<#--                    </ul>-->
+<#--                </li>-->
+<#--            <#else>-->
+<#--                <li>-->
+<#--                    <p>${msg("totpStep2")}</p>-->
+<#--                    <p><img src="data:image/png;base64, ${totp.totpSecretQrCode}" alt="Figure: Barcode"></p>-->
+<#--                    <p><a href="${totp.manualUrl}" id="mode-manual">${msg("totpUnableToScan")}</a></p>-->
+<#--                </li>-->
+<#--            </#if>-->
+<#--            <li>-->
+<#--                <p>${msg("totpStep3")}</p>-->
+<#--                <p>${msg("totpStep3DeviceName")}</p>-->
+<#--            </li>-->
+<#--        </ol>-->
 
-        <hr/>
+<#--        <hr/>-->
 
-        <form action="${url.totpUrl}" class="form-horizontal" method="post">
-            <input type="hidden" id="stateChecker" name="stateChecker" value="${stateChecker}">
-            <div class="form-group">
-                <div class="col-sm-2 col-md-2">
-                    <label for="totp" class="control-label">${msg("authenticatorCode")}</label> <span
-                            class="required">*</span>
-                </div>
+<#--        <form action="${url.totpUrl}" class="form-horizontal" method="post">-->
+<#--            <input type="hidden" id="stateChecker" name="stateChecker" value="${stateChecker}">-->
+<#--            <div class="form-group">-->
+<#--                <div class="col-sm-2 col-md-2">-->
+<#--                    <label for="totp" class="control-label">${msg("authenticatorCode")}</label> <span-->
+<#--                            class="required">*</span>-->
+<#--                </div>-->
 
-                <div class="col-sm-10 col-md-10">
-                    <input type="text" class="form-control" id="totp" name="totp" autocomplete="off" autofocus>
-                    <input type="hidden" id="totpSecret" name="totpSecret" value="${totp.totpSecret}"/>
-                </div>
+<#--                <div class="col-sm-10 col-md-10">-->
+<#--                    <input type="text" class="form-control" id="totp" name="totp" autocomplete="off" autofocus>-->
+<#--                    <input type="hidden" id="totpSecret" name="totpSecret" value="${totp.totpSecret}"/>-->
+<#--                </div>-->
 
 
-            </div>
+<#--            </div>-->
 
-            <div class="form-group" ${messagesPerField.printIfExists('userLabel',properties.kcFormGroupErrorClass!)}">
-            <div class="col-sm-2 col-md-2">
-                <label for="userLabel"
-                       class="control-label">${msg("totpDeviceName")}</label> <#if totp.otpCredentials?size gte 1><span
-                        class="required">*</span></#if>
-            </div>
-            <div class="col-sm-10 col-md-10">
-                <input type="text" class="form-control" id="userLabel" name="userLabel" autocomplete="off">
-            </div>
-            </div>
-            <div class="form-group">
-                <div id="kc-form-buttons" class="col-md-offset-2 col-md-10 submit">
-                    <div class="">
-                        <button type="submit"
-                                class="${properties.kcButtonClass!} ${properties.kcButtonPrimaryClass!} ${properties.kcButtonLargeClass!}"
-                                id="saveTOTPBtn" name="submitAction" value="Save">${msg("doSave")}
-                        </button>
-                        <button type="submit"
-                                class="${properties.kcButtonClass!} ${properties.kcButtonDefaultClass!} ${properties.kcButtonLargeClass!}"
-                                id="cancelTOTPBtn" name="submitAction" value="Cancel">${msg("doCancel")}
-                        </button>
-                    </div>
-                </div>
-            </div>
-        </form>
-    </#if>
+<#--            <div class="form-group" ${messagesPerField.printIfExists('userLabel',properties.kcFormGroupErrorClass!)}">-->
+<#--            <div class="col-sm-2 col-md-2">-->
+<#--                <label for="userLabel"-->
+<#--                       class="control-label">${msg("totpDeviceName")}</label> <#if totp.otpCredentials?size gte 1><span-->
+<#--                        class="required">*</span></#if>-->
+<#--            </div>-->
+<#--            <div class="col-sm-10 col-md-10">-->
+<#--                <input type="text" class="form-control" id="userLabel" name="userLabel" autocomplete="off">-->
+<#--            </div>-->
+<#--            </div>-->
+<#--            <div class="form-group">-->
+<#--                <div id="kc-form-buttons" class="col-md-offset-2 col-md-10 submit">-->
+<#--                    <div class="">-->
+<#--                        <button type="submit"-->
+<#--                                class="${properties.kcButtonClass!} ${properties.kcButtonPrimaryClass!} ${properties.kcButtonLargeClass!}"-->
+<#--                                id="saveTOTPBtn" name="submitAction" value="Save">${msg("doSave")}-->
+<#--                        </button>-->
+<#--                        <button type="submit"-->
+<#--                                class="${properties.kcButtonClass!} ${properties.kcButtonDefaultClass!} ${properties.kcButtonLargeClass!}"-->
+<#--                                id="cancelTOTPBtn" name="submitAction" value="Cancel">${msg("doCancel")}-->
+<#--                        </button>-->
+<#--                    </div>-->
+<#--                </div>-->
+<#--            </div>-->
+<#--        </form>-->
+<#--    </#if>-->
+
+<#--    <section>-->
+<#--        <#if totp.enabled>-->
+
+<#--            <table class="table table-bordered table-striped">-->
+<#--                <thead>-->
+<#--                <#if totp.otpCredentials?size gt 1>-->
+<#--                    <tr>-->
+<#--                        <th colspan="4">${msg("configureAuthenticators")}</th>-->
+<#--                    </tr>-->
+<#--                <#else>-->
+<#--                    <tr>-->
+<#--                        <th colspan="3">${msg("configureAuthenticators")}</th>-->
+<#--                    </tr>-->
+<#--                </#if>-->
+<#--                </thead>-->
+<#--                <tbody>-->
+<#--                <#list totp.otpCredentials as credential>-->
+<#--                    <tr>-->
+<#--                        <td class="provider">${msg("mobile")}</td>-->
+<#--                        <#if totp.otpCredentials?size gt 1>-->
+<#--                            <td class="provider">${credential.id}</td>-->
+<#--                        </#if>-->
+<#--                        <td class="provider">${credential.userLabel!}</td>-->
+<#--                        <td class="action">-->
+<#--                            <form action="${url.totpUrl}" method="post" class="form-inline">-->
+<#--                                <input type="hidden" id="stateChecker" name="stateChecker" value="${stateChecker}">-->
+<#--                                <input type="hidden" id="submitAction" name="submitAction" value="Delete">-->
+<#--                                <input type="hidden" id="credentialId" name="credentialId" value="${credential.id}">-->
+<#--                                <button id="remove-mobile" class="btn btn-default">-->
+<#--                                    <i class="pficon pficon-delete"></i>-->
+<#--                                </button>-->
+<#--                            </form>-->
+<#--                        </td>-->
+<#--                    </tr>-->
+<#--                </#list>-->
+<#--                </tbody>-->
+<#--            </table>-->
+<#--        </#if>-->
+
+
+<#--    </section>-->
 
     <section class="section">
+
+
+
+
         <div class="container p-4 has-rounded-border has-bg-split-20-darkblue registercard">
             <div id="msform">
                 <div class="columns">
@@ -167,10 +213,9 @@
                                 <div class="container p-4">
                                     <h1 class="title is-4 is-darkblue is-uppercase"></h1>
                                     <h1 class="title is-4 is-darkblue-lighter-20">
-                                        Change Password
+                                        Link authenticator application
                                     </h1>
                                     <#--                                    <div class="spacer"></div>-->
-                                    <!--input fields-->
 
 
                                     <#if mode?? && mode = "manual">
@@ -198,13 +243,14 @@
                                             </ul>
                                         </li>
                                     <#else>
-                                        <li>
-                                            <p>${msg("totpStep2")}</p>
+<#--                                        <li>-->
+<#--                                            <p>${msg("totpStep2")}</p>-->
+                                            <p>Scan this barcode:</p>
                                             <p class="text-centered"><img src="data:image/png;base64, ${totp.totpSecretQrCode}"
                                                     alt="Figure: Barcode"></p>
                                             <p><a href="${totp.manualUrl}"
                                                   id="mode-manual">${msg("totpUnableToScan")}</a></p>
-                                        </li>
+<#--                                        </li>-->
                                     </#if>
 
                                     <div class="spacer"></div>
@@ -267,58 +313,138 @@
                         <div class="container m-4 is-white">
                             <div class="content has-text-justified">
                                 <h3 style="color:white; padding-top:1.9em">
-                                    Configure Authenticator
+                                    Authenticator instructions
                                 </h3>
                                 <div style="height:10px; text-align:left"></div>
 
                                 <div style="height:10px"></div>
 
                                 <p>
-                                    Change your current password here. To set a new password your current password has
-                                    to be entered.
-                                </p>
 
-                                <p>
-
+                                <ol>
                                     <li>
-                                <p>${msg("totpManualStep3")}</p>
-                                <ul>
-                                    <li id="kc-totp-type">${msg("totpType")}: ${msg("totp." + totp.policy.type)}</li>
-                                    <li id="kc-totp-algorithm">${msg("totpAlgorithm")}
-                                        : ${totp.policy.getAlgorithmKey()}</li>
-                                    <li id="kc-totp-digits">${msg("totpDigits")}: ${totp.policy.digits}</li>
-                                    <#if totp.policy.type = "totp">
-                                        <li id="kc-totp-period">${msg("totpInterval")}: ${totp.policy.period}</li>
-                                    <#elseif totp.policy.type = "hotp">
-                                        <li id="kc-totp-counter">${msg("totpCounter")}
-                                            : ${totp.policy.initialCounter}</li>
+                                        <p>${msg("totpStep1")}</p>
+
+                                        <ul>
+                                            <#list totp.policy.supportedApplications as app>
+                                                <li>${app}</li>
+                                            </#list>
+                                        </ul>
+                                    </li>
+
+
+                                    <#if mode?? && mode = "manual">
+                                        <li>
+                                            <p>${msg("totpManualStep2")}</p>
+                                            <p><span id="kc-totp-secret-key">${totp.totpSecretEncoded}</span></p>
+                                            <p><a href="${totp.qrUrl}" id="mode-barcode">${msg("totpScanBarcode")}</a></p>
+                                        </li>
+                                        <li>
+                                            <p>${msg("totpManualStep3")}
+                                            <ul>
+                                                <li id="kc-totp-type">${msg("totpType")}: ${msg("totp." + totp.policy.type)}</li>
+                                                <li id="kc-totp-algorithm">${msg("totpAlgorithm")}: ${totp.policy.getAlgorithmKey()}</li>
+                                                <li id="kc-totp-digits">${msg("totpDigits")}: ${totp.policy.digits}</li>
+                                                <#if totp.policy.type = "totp">
+                                                    <li id="kc-totp-period">${msg("totpInterval")}: ${totp.policy.period}</li>
+                                                <#elseif totp.policy.type = "hotp">
+                                                    <li id="kc-totp-counter">${msg("totpCounter")}: ${totp.policy.initialCounter}</li>
+                                                </#if>
+                                            </ul>
+                                        </li>
+                                    <#else>
+                                        <li>
+                                            <p>${msg("totpStep2")}</p>
+<#--                                            <p><img src="data:image/png;base64, ${totp.totpSecretQrCode}" alt="Figure: Barcode"></p>-->
+                                            <p><a href="${totp.manualUrl}" id="mode-manual">${msg("totpUnableToScan")}</a></p>
+                                        </li>
                                     </#if>
-                                </ul>
-                                </li>
 
                                 </p>
+                                    <p>
+                                        <li>
+                                    <p>${msg("totpStep3")}</p>
+                                    <p>${msg("totpStep3DeviceName")}</p>
+                                    </li></p>
 
-                                <p>
 
-                                    <#list totp.policy.supportedApplications as app>
-                                <li>${app}</li>
-                                </#list>
-
-                                </p>
-                                <p>
-
-                                    <li>
-                                <p>${msg("totpStep3")}</p>
-                                <p>${msg("totpStep3DeviceName")}</p>
-                                </li>
-
-                                </p>
+                                    </ol>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
             <!--END card ui-->
+        </div>
+    </section>
+
+
+
+
+    <section>
+        <div id="msform">
+            <div class="columns">
+                <div class="column align-items-top pb-5 is-centered">
+                    <div class="container p-4 has-rounded-border has-bg-split-20-darkblue registercard">
+
+                        <form action="${url.totpUrl}" method="post">
+
+
+                            <div class="container p-4">
+                                <h1 class="title is-4 is-darkblue is-uppercase"></h1>
+                                <h1 class="title is-4 is-darkblue-lighter-20">
+                                    Configured Authenticators
+                                </h1>
+
+
+                                <#if totp.enabled>
+
+                                    <table class="table table-bordered table-striped">
+                                        <thead>
+                                        <#if totp.otpCredentials?size gt 1>
+                                            <tr>
+                                                <th colspan="4">${msg("configureAuthenticators")}</th>
+                                            </tr>
+                                        <#else>
+                                            <tr>
+                                                <th colspan="3">${msg("configureAuthenticators")}</th>
+                                            </tr>
+                                        </#if>
+                                        </thead>
+                                        <tbody>
+                                        <#list totp.otpCredentials as credential>
+                                            <tr>
+                                                <td class="provider">${msg("mobile")}</td>
+                                                <#if totp.otpCredentials?size gt 1>
+                                                    <td class="provider">${credential.id}</td>
+                                                </#if>
+                                                <td class="provider">${credential.userLabel!}</td>
+                                                <td class="action">
+                                                    <form action="${url.totpUrl}" method="post" class="form-inline">
+                                                        <input type="hidden" id="stateChecker" name="stateChecker" value="${stateChecker}">
+                                                        <input type="hidden" id="submitAction" name="submitAction" value="Delete">
+                                                        <input type="hidden" id="credentialId" name="credentialId" value="${credential.id}">
+                                                        <button id="remove-mobile" class="btn btn-default">
+                                                            <i class="pficon pficon-delete"></i>
+                                                        </button>
+                                                    </form>
+                                                </td>
+                                            </tr>
+                                        </#list>
+                                        </tbody>
+                                    </table>
+                                </#if>
+
+
+
+                            </div>
+
+
+                        </form>
+                    </div>
+
+                </div>
+            </div>
         </div>
     </section>
 
