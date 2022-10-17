@@ -72,7 +72,7 @@
                 <form action="${url.sessionsUrl}" method="post">
                     <input type="hidden" id="stateChecker" name="stateChecker" value="${stateChecker}">
                     <#--        <button id="logout-all-sessions" class="btn btn-default">${msg("doLogOutAllSessions")}</button>-->
-                    <button class="button is-rounded is-link is-fullwidth" id="logout-all-sessions"
+                    <button class="button is-rounded is-link" id="logout-all-sessions"
                             style="padding-left: 2rem">
                         <#--            <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true"-->
                         <#--                 focusable="false" viewBox="0 0 512 512"-->

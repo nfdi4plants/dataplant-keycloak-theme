@@ -128,6 +128,7 @@
             </div>
         </section>
 </#if>
+
 <#list federatedIdentity.identities as identity>
 <#if identity.connected>
         <section class="container p-4 content-area">
