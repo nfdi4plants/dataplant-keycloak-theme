@@ -135,12 +135,15 @@
                                         <div class="field" style="margin-top: 2rem; margin-bottom: 1rem">
                                             <nav class="level">
                                                 <!--add empty to trigger auto align for level-->
-                                                <div class="level-left"></div>
+                                                <div class="level-left">
 
-                                                <div id="kc-form-options" class="${properties.kcFormOptionsClass!}">
-                                                    <div class="${properties.kcFormOptionsWrapperClass!}">
-                                                        <span><a href="${url.loginUrl}">${kcSanitize(msg("backToLogin"))?no_esc}</a></span>
+                                                    <div id="kc-form-options" class="${properties.kcFormOptionsClass!}">
+                                                        <div class="${properties.kcFormOptionsWrapperClass!}">
+                                                            <span><a href="${url.loginUrl}">${kcSanitize(msg("backToLogin"))?no_esc}</a></span>
+                                                        </div>
                                                     </div>
+
+
                                                 </div>
 
 
