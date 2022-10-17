@@ -182,6 +182,112 @@
 <#--    </section>-->
 
     <section class="section">
+        <div id="msform">
+            <div class="container has-rounded-border registercard">
+                <article class="message is-info">
+                    <div class="message-header">
+                        <p>Configured Authenticators</p>
+                    </div>
+                    <div class="message-body">
+
+                        <#if totp.enabled>
+
+                            <table class="table table-bordered table-striped">
+                                <thead>
+                                <#if totp.otpCredentials?size gt 1>
+                                    <tr>
+                                        <th colspan="4">${msg("configureAuthenticators")}</th>
+                                    </tr>
+                                <#else>
+                                    <tr>
+                                        <th colspan="3">${msg("configureAuthenticators")}</th>
+                                    </tr>
+                                </#if>
+                                </thead>
+                                <tbody>
+                                <#list totp.otpCredentials as credential>
+                                    <tr>
+                                        <td class="provider">${msg("mobile")}</td>
+                                        <#if totp.otpCredentials?size gt 1>
+                                            <td class="provider">${credential.id}</td>
+                                        </#if>
+                                        <td class="provider">${credential.userLabel!}</td>
+                                        <td class="action">
+                                            <form action="${url.totpUrl}" method="post" class="form-inline">
+                                                <input type="hidden" id="stateChecker" name="stateChecker" value="${stateChecker}">
+                                                <input type="hidden" id="submitAction" name="submitAction" value="Delete">
+                                                <input type="hidden" id="credentialId" name="credentialId" value="${credential.id}">
+                                                <button id="remove-mobile" class="btn btn-default">
+                                                    <i class="pficon pficon-delete"></i>
+                                                </button>
+                                            </form>
+                                        </td>
+                                    </tr>
+
+
+
+
+                                </#list>
+                                </tbody>
+                            </table>
+                        </#if>
+
+
+                    </div>
+
+
+                </article>
+            </div>
+        </div>
+
+    </section>
+
+
+    <section>
+
+        <div class="container has-rounded-border registercard">
+            <article class="message is-info">
+                <div class="message-header">
+                    <p>Configured Authenticators</p>
+                </div>
+                <div class="message-body">
+
+
+            <#list totp.otpCredentials as credential>
+                <tr>
+                    <td class="provider">${msg("mobile")}</td>
+                    <#if totp.otpCredentials?size gt 1>
+                        <td class="provider">${credential.id}</td>
+                    </#if>
+
+                    <form action="${url.totpUrl}" method="post" class="form-inline">
+                        <div class="columns is-mobile">
+                            <div class="column is-two-thirds-tablet">${credential.id}</div>
+                            <div class="column"> ${credential.userLabel!}</div>
+                            <div class="column">
+                                                    <span class="icon">
+                                                <img src = "${url.resourcesPath}/img/circle-xmark-solid.svg" alt="delete"/>
+                                            </span>
+                            </div>
+                        </div>
+                    </form>
+
+
+
+            </#list>
+
+                    </article>
+            </div>
+
+
+        </div>
+
+
+    </section>
+
+
+
+    <section >
 
 
 
@@ -377,7 +483,6 @@
             <!--END card ui-->
         </div>
     </section>
-
 
 
 
