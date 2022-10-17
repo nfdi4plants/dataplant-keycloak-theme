@@ -127,7 +127,39 @@
                 <!--END card ui-->
             </div>
         </section>
+</#if>
+<#list federatedIdentity.identities as identity>
+<#if identity.connected>
+        <section class="container p-4 content-area">
+            <div class="container has-rounded-border registercard">
+                <article class="message is-info">
+                    <div class="message-header">
+                        <p>Linked Providers</p>
+                    </div>
+                    <div class="list has-visible-pointer-controls">
+                        <#list federatedIdentity.identities as identity>
+                            <#if identity.connected>
+                                <#if federatedIdentity.removeLinkPossible>
+                                    <form action="${url.socialUrl}" method="post" class="form-inline">
+                                        <input type="hidden" id="stateChecker" name="stateChecker"
+                                               value="${stateChecker}">
+                                        <input type="hidden" id="action" name="action" value="remove">
+                                        <input type="hidden" id="providerId" name="providerId"
+                                               value="${identity.providerId!}">
+                                        <button id="remove-link-${identity.providerId!}"
+                                                class="button is-rounded is-link is-fullwidth">${msg("doRemove")}</button>
+                                    </form>
+                                </#if>
+                            </#if>
+                        </#list>
+
+                    </div>
+                </article>
+            </div>
+        </section>
+
     </#if>
+    </#list>
 
     <section class="section">
         <div class="container p-4 has-rounded-border has-bg-split-20-darkblue registercard">
