@@ -8,7 +8,22 @@ padding-bottom: 100px;
 }
 
 
+html {
+  background-color: #576573;
+}
+
+
+
 @media only screen and (max-width: 768px) {
+
+
+  .section {
+    background-color: #2D3E50;
+  }
+  .alert {
+    padding-bottom: 25px;
+  }
+
 
   .has-rounded-border {
    border-radius: 0px;
@@ -81,5 +96,10 @@ padding-bottom: 100px;
 
 .text-centered {
   text-align:center;
+}
+
+#email {
+  background-color: #FBFBFB;
+  color: #c1c1c1;
 }
 

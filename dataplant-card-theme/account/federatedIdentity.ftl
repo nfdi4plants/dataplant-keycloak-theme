@@ -263,4 +263,6 @@
         </div>
     </section>
 
+    <div class="spacer"></div>
+
 </@layout.mainLayout>
