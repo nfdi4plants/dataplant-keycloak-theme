@@ -106,12 +106,26 @@
         </ul>
     </div>
 
-    <div class="col-sm-9 content-area">
+<#--    <div class="container p-4 content-area">-->
+        <div>
         <#if message?has_content>
             <div class="alert alert-${message.type}">
-                <#if message.type=='success' ><span class="pficon pficon-ok"></span></#if>
-                <#if message.type=='error' ><span class="pficon pficon-error-circle-o"></span></#if>
-                <span class="kc-feedback-text">${kcSanitize(message.summary)?no_esc}</span>
+<#--                <#if message.type=='success' ><span class="pficon pficon-ok"></span></#if>-->
+                <#if message.type=='success' >
+                <div class="notification is-success">
+<#--                    <button class="delete"></button>-->
+                    <span class="kc-feedback-text">${kcSanitize(message.summary)?no_esc}</span>
+                </div>
+                </#if>
+                <#if message.type=='error' >
+                    <div class="notification is-danger">
+                        <#--                    <button class="delete"></button>-->
+                        <span class="kc-feedback-text">${kcSanitize(message.summary)?no_esc}</span>
+                    </div>
+                </#if>
+
+<#--                <#if message.type=='error' ><span class="pficon pficon-error-circle-o"></span></#if>-->
+<#--                <span class="kc-feedback-text">${kcSanitize(message.summary)?no_esc}</span>-->
             </div>
         </#if>
 

@@ -83,14 +83,17 @@
                                             <div class="${properties.kcFormGroupClass!}">
                                                 <div class="${properties.kcInputWrapperClass!}">
                                                     <#list otpLogin.userOtpCredentials as otpCredential>
-                                                        <input id="kc-otp-credential-${otpCredential?index}"
-                                                               class="${properties.kcLoginOTPListInputClass!}"
+
+                                                        <input class="${properties.kcLoginOTPListInputClass!} is-checkradio"
+                                                               id="kc-otp-credential-${otpCredential?index}"
                                                                type="radio" name="selectedCredentialId"
                                                                value="${otpCredential.id}"
                                                                <#if otpCredential.id == otpLogin.selectedCredentialId>checked="checked"</#if>>
                                                         <label for="kc-otp-credential-${otpCredential?index}"
                                                                class="${properties.kcLoginOTPListClass!}"
                                                                tabindex="${otpCredential?index}">
+
+
                                 <span class="${properties.kcLoginOTPListItemHeaderClass!}">
                                     <span class="${properties.kcLoginOTPListItemIconBodyClass!}">
                                       <i class="${properties.kcLoginOTPListItemIconClass!}" aria-hidden="true"></i>

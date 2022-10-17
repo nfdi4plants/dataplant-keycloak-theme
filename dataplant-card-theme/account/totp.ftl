@@ -180,116 +180,103 @@
 
 
 <#--    </section>-->
-
-    <section class="section">
-        <div id="msform">
-            <div class="container has-rounded-border registercard">
-                <article class="message is-info">
-                    <div class="message-header">
-                        <p>Configured Authenticators</p>
-                    </div>
-                    <div class="message-body">
-
-                        <#if totp.enabled>
-
-                            <table class="table table-bordered table-striped">
-                                <thead>
-                                <#if totp.otpCredentials?size gt 1>
-                                    <tr>
-                                        <th colspan="4">${msg("configureAuthenticators")}</th>
-                                    </tr>
-                                <#else>
-                                    <tr>
-                                        <th colspan="3">${msg("configureAuthenticators")}</th>
-                                    </tr>
-                                </#if>
-                                </thead>
-                                <tbody>
-                                <#list totp.otpCredentials as credential>
-                                    <tr>
-                                        <td class="provider">${msg("mobile")}</td>
-                                        <#if totp.otpCredentials?size gt 1>
-                                            <td class="provider">${credential.id}</td>
-                                        </#if>
-                                        <td class="provider">${credential.userLabel!}</td>
-                                        <td class="action">
-                                            <form action="${url.totpUrl}" method="post" class="form-inline">
-                                                <input type="hidden" id="stateChecker" name="stateChecker" value="${stateChecker}">
-                                                <input type="hidden" id="submitAction" name="submitAction" value="Delete">
-                                                <input type="hidden" id="credentialId" name="credentialId" value="${credential.id}">
-                                                <button id="remove-mobile" class="btn btn-default">
-                                                    <i class="pficon pficon-delete"></i>
-                                                </button>
-                                            </form>
-                                        </td>
-                                    </tr>
-
-
-
-
-                                </#list>
-                                </tbody>
-                            </table>
-                        </#if>
-
-
-                    </div>
-
-
-                </article>
-            </div>
-        </div>
-
-    </section>
-
-
-    <section>
-
-        <div class="container has-rounded-border registercard">
-            <article class="message is-info">
-                <div class="message-header">
-                    <p>Configured Authenticators</p>
-                </div>
-                <div class="message-body">
-
-
-            <#list totp.otpCredentials as credential>
-                <tr>
-                    <td class="provider">${msg("mobile")}</td>
-                    <#if totp.otpCredentials?size gt 1>
-                        <td class="provider">${credential.id}</td>
-                    </#if>
-
-                    <form action="${url.totpUrl}" method="post" class="form-inline">
-                        <div class="columns is-mobile">
-                            <div class="column is-two-thirds-tablet">${credential.id}</div>
-                            <div class="column"> ${credential.userLabel!}</div>
-                            <div class="column">
-                                                    <span class="icon">
-                                                <img src = "${url.resourcesPath}/img/circle-xmark-solid.svg" alt="delete"/>
-                                            </span>
-                            </div>
+    <#if totp.enabled>
+        <section class="section">
+            <div id="msform">
+                <div class="container has-rounded-border registercard">
+                    <article class="message is-info">
+                        <div class="message-header">
+                            <p>Configured Authenticators</p>
                         </div>
-                    </form>
+                        <div class="message-body">
+
+
+                            <#--                            <table class="table table-bordered table-striped">-->
+                            <#--                                <thead>-->
+                            <#if totp.otpCredentials?size gt 1>
+                            <#--                                    <tr>-->
+                            <#--                                        <th colspan="4">${msg("configureAuthenticators")}</th>-->
+                            <#--                                    </tr>-->
+                            <#else>
+                            <#--                                    <tr>-->
+                            <#--                                        <th colspan="3">${msg("configureAuthenticators")}</th>-->
+                            <#--                                    </tr>-->
+                            </#if>
+                            <#--                                </thead>-->
+                            <#--                                <tbody>-->
+                            <#list totp.otpCredentials as credential>
+                            <#--                                    <tr>-->
+                            <#--                                        <td class="provider">${msg("mobile")}</td>-->
+                                <#if totp.otpCredentials?size gt 1>
+                                <#--                                            <td class="provider">${credential.id}</td>-->
+                                </#if>
+                            <#--                                        <td class="provider">${credential.userLabel!}</td>-->
+                            <#--                                        <td class="action">-->
+                                <form action="${url.totpUrl}" method="post" class="form-inline">
+                                    <input type="hidden" id="stateChecker" name="stateChecker" value="${stateChecker}">
+                                    <input type="hidden" id="submitAction" name="submitAction" value="Delete">
+                                    <input type="hidden" id="credentialId" name="credentialId" value="${credential.id}">
+                                    <#--                                                <button id="remove-mobile" class="btn btn-default">-->
+                                    <#--                                                    <i class="pficon pficon-delete"></i>-->
+                                    <#--                                                    <img src = "${url.resourcesPath}/img/circle-xmark-solid.svg" alt="delete"/>-->
+                                    <#--                                                </button>-->
+                                    <#--                                            </form>-->
+                                    <#--                                        </td>-->
+                                    <#--                                    </tr>-->
+
+
+                                    <div class="list has-visible-pointer-controls">
+                                        <div class="list-item">
+                                            <div class="list-item-image">
+                                                <figure class="image is-32x32">
+
+                                                    <#--                                                    <img class="is-rounded" src="https://via.placeholder.com/128x128.png?text=Image">-->
+                                                    <img src="${url.resourcesPath}/img/mobile-screen-button-solid.svg"
+                                                         alt="delete" width="32" height="32"/>
+                                                </figure>
+                                            </div>
+
+                                            <div class="list-item-content">
+                                                <div class="list-item-title">${credential.id}</div>
+                                                <div class="list-item-description">${credential.userLabel!}</div>
+                                            </div>
+
+                                            <div class="list-item-controls">
+                                                <div class="buttons is-right">
+                                                    <button class="button">
+                                                      <span class="icon is-small">
+                                                        <i class="fas fa-ellipsis-h"></i>
+                                                           <img src="${url.resourcesPath}/img/circle-xmark-solid.svg"
+                                                                alt="delete"/>
+                                                      </span>
+                                                    </button>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                </form>
 
 
 
-            </#list>
+
+                            </#list>
+                            <#--                                </tbody>-->
+                            <#--                            </table>-->
+
+
+                        </div>
+
 
                     </article>
+                </div>
             </div>
 
-
-        </div>
-
-
-    </section>
+        </section>
+    </#if>
 
 
-
-    <section >
-
-
+    <section class="section">
 
 
         <div class="container p-4 has-rounded-border has-bg-split-20-darkblue registercard">
@@ -349,14 +336,15 @@
                                             </ul>
                                         </li>
                                     <#else>
-<#--                                        <li>-->
-<#--                                            <p>${msg("totpStep2")}</p>-->
-                                            <p>Scan this barcode:</p>
-                                            <p class="text-centered"><img src="data:image/png;base64, ${totp.totpSecretQrCode}"
+                                    <#--                                        <li>-->
+                                    <#--                                            <p>${msg("totpStep2")}</p>-->
+                                        <p>Scan this barcode:</p>
+                                        <p class="text-centered"><img
+                                                    src="data:image/png;base64, ${totp.totpSecretQrCode}"
                                                     alt="Figure: Barcode"></p>
-                                            <p><a href="${totp.manualUrl}"
-                                                  id="mode-manual">${msg("totpUnableToScan")}</a></p>
-<#--                                        </li>-->
+                                        <p><a href="${totp.manualUrl}"
+                                              id="mode-manual">${msg("totpUnableToScan")}</a></p>
+                                    <#--                                        </li>-->
                                     </#if>
 
                                     <div class="spacer"></div>
@@ -443,30 +431,36 @@
                                         <li>
                                             <p>${msg("totpManualStep2")}</p>
                                             <p><span id="kc-totp-secret-key">${totp.totpSecretEncoded}</span></p>
-                                            <p><a href="${totp.qrUrl}" id="mode-barcode">${msg("totpScanBarcode")}</a></p>
+                                            <p><a href="${totp.qrUrl}" id="mode-barcode">${msg("totpScanBarcode")}</a>
+                                            </p>
                                         </li>
                                         <li>
                                             <p>${msg("totpManualStep3")}
                                             <ul>
-                                                <li id="kc-totp-type">${msg("totpType")}: ${msg("totp." + totp.policy.type)}</li>
-                                                <li id="kc-totp-algorithm">${msg("totpAlgorithm")}: ${totp.policy.getAlgorithmKey()}</li>
+                                                <li id="kc-totp-type">${msg("totpType")}
+                                                    : ${msg("totp." + totp.policy.type)}</li>
+                                                <li id="kc-totp-algorithm">${msg("totpAlgorithm")}
+                                                    : ${totp.policy.getAlgorithmKey()}</li>
                                                 <li id="kc-totp-digits">${msg("totpDigits")}: ${totp.policy.digits}</li>
                                                 <#if totp.policy.type = "totp">
-                                                    <li id="kc-totp-period">${msg("totpInterval")}: ${totp.policy.period}</li>
+                                                    <li id="kc-totp-period">${msg("totpInterval")}
+                                                        : ${totp.policy.period}</li>
                                                 <#elseif totp.policy.type = "hotp">
-                                                    <li id="kc-totp-counter">${msg("totpCounter")}: ${totp.policy.initialCounter}</li>
+                                                    <li id="kc-totp-counter">${msg("totpCounter")}
+                                                        : ${totp.policy.initialCounter}</li>
                                                 </#if>
                                             </ul>
                                         </li>
                                     <#else>
                                         <li>
                                             <p>${msg("totpStep2")}</p>
-<#--                                            <p><img src="data:image/png;base64, ${totp.totpSecretQrCode}" alt="Figure: Barcode"></p>-->
-                                            <p><a href="${totp.manualUrl}" id="mode-manual">${msg("totpUnableToScan")}</a></p>
+                                            <#--                                            <p><img src="data:image/png;base64, ${totp.totpSecretQrCode}" alt="Figure: Barcode"></p>-->
+                                            <p><a href="${totp.manualUrl}"
+                                                  id="mode-manual">${msg("totpUnableToScan")}</a></p>
                                         </li>
                                     </#if>
 
-                                </p>
+                                    </p>
                                     <p>
                                         <li>
                                     <p>${msg("totpStep3")}</p>
@@ -474,82 +468,13 @@
                                     </li></p>
 
 
-                                    </ol>
+                                </ol>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
             <!--END card ui-->
-        </div>
-    </section>
-
-
-
-    <section>
-        <div id="msform">
-            <div class="columns">
-                <div class="column align-items-top pb-5 is-centered">
-                    <div class="container p-4 has-rounded-border has-bg-split-20-darkblue registercard">
-
-                        <form action="${url.totpUrl}" method="post">
-
-
-                            <div class="container p-4">
-                                <h1 class="title is-4 is-darkblue is-uppercase"></h1>
-                                <h1 class="title is-4 is-darkblue-lighter-20">
-                                    Configured Authenticators
-                                </h1>
-
-
-                                <#if totp.enabled>
-
-                                    <table class="table table-bordered table-striped">
-                                        <thead>
-                                        <#if totp.otpCredentials?size gt 1>
-                                            <tr>
-                                                <th colspan="4">${msg("configureAuthenticators")}</th>
-                                            </tr>
-                                        <#else>
-                                            <tr>
-                                                <th colspan="3">${msg("configureAuthenticators")}</th>
-                                            </tr>
-                                        </#if>
-                                        </thead>
-                                        <tbody>
-                                        <#list totp.otpCredentials as credential>
-                                            <tr>
-                                                <td class="provider">${msg("mobile")}</td>
-                                                <#if totp.otpCredentials?size gt 1>
-                                                    <td class="provider">${credential.id}</td>
-                                                </#if>
-                                                <td class="provider">${credential.userLabel!}</td>
-                                                <td class="action">
-                                                    <form action="${url.totpUrl}" method="post" class="form-inline">
-                                                        <input type="hidden" id="stateChecker" name="stateChecker" value="${stateChecker}">
-                                                        <input type="hidden" id="submitAction" name="submitAction" value="Delete">
-                                                        <input type="hidden" id="credentialId" name="credentialId" value="${credential.id}">
-                                                        <button id="remove-mobile" class="btn btn-default">
-                                                            <i class="pficon pficon-delete"></i>
-                                                        </button>
-                                                    </form>
-                                                </td>
-                                            </tr>
-                                        </#list>
-                                        </tbody>
-                                    </table>
-                                </#if>
-
-
-
-                            </div>
-
-
-                        </form>
-                    </div>
-
-                </div>
-            </div>
         </div>
     </section>
 
