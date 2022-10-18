@@ -423,6 +423,24 @@
 <#--                                               value="${(account.attributes.role!'')}"/>-->
 <#--                                    </div>-->
 
+
+
+                                    <div class="field">
+                                        <div class="col-sm-2 col-md-2">
+                                            <label for="user.attributes.research" class="control-label">Research interests</label> <span
+                                                    class="required">*</span>
+                                        </div>
+
+                                        <div class="control">
+                                            <select multiple data-type="tags" data-placeholder="Choose Tags">
+                                                <option value="one" selected>One</option>
+                                                <option value="two" selected>Two</option>
+                                                <option value="three">Three</option>
+                                            </select>
+                                        </div>
+                                    </div>
+
+
                                     <div class="field">
 
                                         <div class="col-sm-2 col-md-2">
