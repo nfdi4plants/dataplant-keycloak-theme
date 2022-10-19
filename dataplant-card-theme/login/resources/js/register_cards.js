@@ -231,7 +231,7 @@ function next() {
             if (questions[i] == 'card4') {
                 console.log("is card4")
                 let consortium = document.getElementById("consortium").value;
-                let research = document.getElementById("research").value;
+                let research = document.getElementById("tagger").value;
                 let role = document.getElementById("role").value;
 
 
