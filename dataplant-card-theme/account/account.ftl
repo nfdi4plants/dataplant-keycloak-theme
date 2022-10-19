@@ -469,7 +469,7 @@
 <#--                                        })-->
 <#--                                    </script>-->
 
-                                    <input class= "textarea is-rounded" name='user.attributes.research' placeholder='Research Interests' value="${(account.attributes.research!'')}" id="tagger">
+                                    <input class= "textarea is-rounded" name='user.attributes.research' value="${(account.attributes.research!'')}" id="tagger">
 
 
                                     <script>
@@ -478,11 +478,13 @@
                                             // init Tagify script on the above inputs
                                             tagify = new Tagify(input, {
                                                 whitelist : ["dataplant", "biology", "development", "ontologies", "design", "nfdi", "de.nbi"],
+                                                userInput: false,
                                                 dropdown: {
                                                     position: "manual",
                                                     maxItems: Infinity,
                                                     enabled: 0,
-                                                    classname: "customSuggestionsList"
+                                                    classname: "customSuggestionsList",
+
                                                 },
                                                 templates: {
                                                     dropdownItemNoMatch() {
