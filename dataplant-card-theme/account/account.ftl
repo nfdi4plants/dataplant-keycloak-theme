@@ -469,7 +469,8 @@
 <#--                                        })-->
 <#--                                    </script>-->
 
-                                    <input class= "input is-rounded" name='user.attributes.research' placeholder='Research Interests' value="${(account.attributes.research!'')}" id="tagger">
+                                    <input class= "textarea is-rounded" name='user.attributes.research' placeholder='Research Interests' value="${(account.attributes.research!'')}" id="tagger">
+
 
                                     <script>
 

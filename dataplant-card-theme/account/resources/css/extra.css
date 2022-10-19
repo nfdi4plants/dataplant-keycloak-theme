@@ -170,3 +170,7 @@ body {
     background-color: #2d3e50;
   }
 }
+
+.tags.tagify.textarea.is-rounded {
+  padding:10px;
+}

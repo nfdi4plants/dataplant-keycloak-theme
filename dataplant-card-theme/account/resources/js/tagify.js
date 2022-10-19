@@ -1138,7 +1138,7 @@
          * @param {Object}     settings  Tagify instance settings Object
          */
         wrapper(input, _s) {
-            return `<tags class="${_s.classNames.namespace} ${_s.mode ? `${_s.classNames[_s.mode + "Mode"]}` : ""} ${input.className}"
+            return `<tags class="tags ${_s.classNames.namespace} ${_s.mode ? `${_s.classNames[_s.mode + "Mode"]}` : ""} ${input.className}"
                     ${_s.readonly ? 'readonly' : ''}
                     ${_s.disabled ? 'disabled' : ''}
                     ${_s.required ? 'required' : ''}
@@ -1155,7 +1155,7 @@
 
         tag(tagData, _ref) {
             let _s = _ref.settings;
-            return `<tag title="${tagData.title || tagData.value}"
+            return `<tag class="tag is-success is-medium" title="${tagData.title || tagData.value}"
                     contenteditable='false'
                     spellcheck='false'
                     tabIndex="${_s.a11y.focusableTags ? 0 : -1}"
@@ -1173,7 +1173,7 @@
                 isManual = _sd.position == 'manual',
                 className = `${settings.classNames.dropdown}`;
             return `<div class="${isManual ? "" : className} ${_sd.classname}" role="listbox" aria-labelledby="dropdown">
-                    <tags data-selector='tagify-suggestions-wrapper' class="${settings.classNames.dropdownWrapper}"></tags>
+                    <div data-selector='tagify-suggestions-wrapper' class="${settings.classNames.dropdownWrapper}"></div>
                 </div>`;
         },
 
@@ -1188,10 +1188,10 @@
         },
 
         dropdownItem(item) {
-            return `<tag ${this.getAttributes(item)}
+            return `<div ${this.getAttributes(item)}
                     class='${this.settings.classNames.dropdownItem} ${item.class ? item.class : ""}'
                     tabindex="0"
-                    role="option">${item.mappedValue || item.value}</tag>`;
+                    role="option">${item.mappedValue || item.value}</div>`;
         },
 
         /**
