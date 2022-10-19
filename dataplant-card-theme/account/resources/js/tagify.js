@@ -1173,7 +1173,7 @@
                 isManual = _sd.position == 'manual',
                 className = `${settings.classNames.dropdown}`;
             return `<div class="${isManual ? "" : className} ${_sd.classname}" role="listbox" aria-labelledby="dropdown">
-                    <div data-selector='tagify-suggestions-wrapper' class="${settings.classNames.dropdownWrapper}"></div>
+                    <tags data-selector='tagify-suggestions-wrapper' class="${settings.classNames.dropdownWrapper}"></tags>
                 </div>`;
         },
 
@@ -1188,10 +1188,10 @@
         },
 
         dropdownItem(item) {
-            return `<div ${this.getAttributes(item)}
+            return `<tag ${this.getAttributes(item)}
                     class='${this.settings.classNames.dropdownItem} ${item.class ? item.class : ""}'
                     tabindex="0"
-                    role="option">${item.mappedValue || item.value}</div>`;
+                    role="option">${item.mappedValue || item.value}</tag>`;
         },
 
         /**

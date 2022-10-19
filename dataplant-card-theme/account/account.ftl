@@ -446,28 +446,79 @@
                                                     class="required">*</span>
                                         </div>
 
-                                        <form style="margin: 100px">
+<#--                                        <form style="margin: 100px">-->
 
-                                            <textarea class="textarea" id="tagger" type="text" name="user.attributes.research" value="${(account.attributes.research!'')}"></textarea>
-                                        </form>
+<#--                                            <textarea class="textarea" id="tagger" type="text" name="user.attributes.research" value="${(account.attributes.research!'')}"></textarea>-->
+<#--                                        </form>-->
 
-                                    </div>
+<#--                                    </div>-->
+
+<#--                                    <script>-->
+<#--                                        var input = document.getElementById('tagger')-->
+<#--                                        var tagrify = new Tagify(input, {-->
+<#--                                            enforceWhitelist: true,-->
+<#--                                            whitelist: ["plant", "datas", "biology", "nfdi4plants", "nfdi", "freiburg"],-->
+<#--                                            dropdown : {-->
+<#--                                                classname     : "color-blue",-->
+<#--                                                enabled       : 0,              // show the dropdown immediately on focus-->
+<#--                                                maxItems      : 5,-->
+<#--                                                position      : "field",         // place the dropdown near the typed text-->
+<#--                                                closeOnSelect : true,          // keep the dropdown open after selecting a suggestion-->
+<#--                                                highlightFirst: false-->
+<#--                                            }-->
+<#--                                        })-->
+<#--                                    </script>-->
+
+                                    <input class= "input is-rounded" name='user.attributes.research' placeholder='Research Interests' value="${(account.attributes.research!'')}" id="tagger">
 
                                     <script>
-                                        var input = document.getElementById('tagger')
-                                        var tagrify = new Tagify(input, {
-                                            enforceWhitelist: true,
-                                            whitelist: ["plant", "datas", "biology", "nfdi4plants", "nfdi", "freiburg"],
-                                            dropdown : {
-                                                classname     : "color-blue",
-                                                enabled       : 0,              // show the dropdown immediately on focus
-                                                maxItems      : 5,
-                                                position      : "mouse",         // place the dropdown near the typed text
-                                                closeOnSelect : true,          // keep the dropdown open after selecting a suggestion
-                                                highlightFirst: false
-                                            }
-                                        })
+
+                                        var input = document.getElementById('tagger'),
+                                            // init Tagify script on the above inputs
+                                            tagify = new Tagify(input, {
+                                                whitelist : ["dataplant", "biology", "development", "ontologies", "design", "nfdi", "de.nbi"],
+                                                dropdown: {
+                                                    position: "manual",
+                                                    maxItems: Infinity,
+                                                    enabled: 0,
+                                                    classname: "customSuggestionsList"
+                                                },
+                                                templates: {
+                                                    dropdownItemNoMatch() {
+                                                        return `<div class='empty'>Nothing Found</div>`;
+                                                    }
+                                                },
+                                                enforceWhitelist: true
+                                            })
+
+                                        tagify.on("dropdown:show", onSuggestionsListUpdate)
+                                            .on("dropdown:hide", onSuggestionsListHide)
+                                            .on('dropdown:scroll', onDropdownScroll)
+
+                                        renderSuggestionsList()  // defined down below
+
+                                        // ES2015 argument destructuring
+                                        function onSuggestionsListUpdate({ detail:suggestionsElm }){
+                                            console.log(  suggestionsElm  )
+                                        }
+
+                                        function onSuggestionsListHide(){
+                                            console.log("hide dropdown")
+                                        }
+
+                                        function onDropdownScroll(e){
+                                            console.log(e.detail)
+                                        }
+
+                                        // https://developer.mozilla.org/en-US/docs/Web/API/Element/insertAdjacentElement
+                                        function renderSuggestionsList(){
+                                            tagify.dropdown.show() // load the list
+                                            tagify.DOM.scope.parentNode.appendChild(tagify.DOM.dropdown)
+                                        }
+
                                     </script>
+
+                                        </div>
 
 
                                     <div class="field">
