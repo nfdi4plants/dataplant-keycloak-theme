@@ -401,16 +401,16 @@
                                                value="${(account.attributes.affiliation!'')}"/>
                                     </div>
 
-                                    <div class="field">
+<#--                                    <div class="field">-->
 
-                                        <div class="col-sm-2 col-md-2">
-                                            <label for="user.attributes.research" class="control-label">Research interests</label> <span
-                                                    class="required">*</span>
-                                        </div>
-                                        <input class="form-control input is-rounded" type="text" placeholder="Research interests"
-                                               id="user.attributes.research" name="user.attributes.research"
-                                               value="${(account.attributes.research!'')}"/>
-                                    </div>
+<#--                                        <div class="col-sm-2 col-md-2">-->
+<#--                                            <label for="user.attributes.research" class="control-label">Research interests</label> <span-->
+<#--                                                    class="required">*</span>-->
+<#--                                        </div>-->
+<#--                                        <input class="form-control input is-rounded" type="text" placeholder="Research interests"-->
+<#--                                               id="user.attributes.research" name="user.attributes.research"-->
+<#--                                               value="${(account.attributes.research!'')}"/>-->
+<#--                                    </div>-->
 
 <#--                                    <div class="field">-->
 
@@ -425,20 +425,49 @@
 
 
 
-                                    <div class="field">
+<#--                                    <div class="field">-->
+<#--                                        <div class="col-sm-2 col-md-2">-->
+<#--                                            <label for="user.attributes.research" class="control-label">Research interests</label> <span-->
+<#--                                                    class="required">*</span>-->
+<#--                                        </div>-->
+
+<#--                                        <div class="control">-->
+<#--                                            <select multiple data-type="tags" data-placeholder="Choose Tags">-->
+<#--                                                <option value="one" selected>One</option>-->
+<#--                                                <option value="two" selected>Two</option>-->
+<#--                                                <option value="three">Three</option>-->
+<#--                                            </select>-->
+<#--                                        </div>-->
+<#--                                    </div>-->
+                                    <div class=""field>
+
                                         <div class="col-sm-2 col-md-2">
                                             <label for="user.attributes.research" class="control-label">Research interests</label> <span
                                                     class="required">*</span>
                                         </div>
 
-                                        <div class="control">
-                                            <select multiple data-type="tags" data-placeholder="Choose Tags">
-                                                <option value="one" selected>One</option>
-                                                <option value="two" selected>Two</option>
-                                                <option value="three">Three</option>
-                                            </select>
-                                        </div>
+                                        <form style="margin: 100px">
+
+                                            <textarea class="textarea" id="tagger" type="text" name="user.attributes.research" value="${(account.attributes.research!'')}"></textarea>
+                                        </form>
+
                                     </div>
+
+                                    <script>
+                                        var input = document.getElementById('tagger')
+                                        var tagrify = new Tagify(input, {
+                                            enforceWhitelist: true,
+                                            whitelist: ["plant", "datas", "biology", "nfdi4plants", "nfdi", "freiburg"],
+                                            dropdown : {
+                                                classname     : "color-blue",
+                                                enabled       : 0,              // show the dropdown immediately on focus
+                                                maxItems      : 5,
+                                                position      : "mouse",         // place the dropdown near the typed text
+                                                closeOnSelect : true,          // keep the dropdown open after selecting a suggestion
+                                                highlightFirst: false
+                                            }
+                                        })
+                                    </script>
 
 
                                     <div class="field">

@@ -12,46 +12,74 @@ html {
   background-color: #576573;
 }
 
-
-
-@media only screen and (max-width: 768px) {
-
-
-  .section {
-    background-color: #2D3E50;
-  }
-  .alert {
-    padding-bottom: 25px;
-  }
-
-
-  .has-rounded-border {
-   border-radius: 0px;
+body {
+  background-color: #fafafa;
 }
 
-.column {
-  padding:0rem;
-
+.code-example {
+  display: block;
+  padding: 1rem;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #2D3E50;
+  color: white !important;
 }
 
-.m-4 {
-  margin: 0.2rem;
+.details-card p {
+  font-size: 1.5em !important;
+  margin-bottom: 0.5em !important;
 }
 
-.p-4 {
-  padding:0.2rem;
+.card-container {
+  max-width: 70%;
+  margin: 0 auto;
 }
 
-.section {
-  padding: 2.5rem 0rem 0rem;
+.registercard {
+  max-width: 1000px !important
 }
 
 
-#kc-content-wrapper {
-  padding-bottom: 30px;
-  background-color: #2d3e50;
+.spacer {
+  height: 70px;
 }
+
+.provider-button {
+  border-radius: 1.2rem;
+  background-color: transparent;
+  width: 100px;
+  height: 100px;
+  border-color: #4f4f4f;
+  border-width: 3px;
+  border-style: solid;
+  cursor:pointer;
+  margin-top: 4px;
 }
+
+.provider-button:hover{
+  box-shadow: 0 .8rem 1.5rem rgba(0,0,0,.1);
+  border-color: white;
+  background-color: #ffffff1c;
+}
+
+.provider-button figure{
+  margin: 0 0 10px;
+}
+
+.pbutton-img{
+  /*border-radius: 50%;*/
+  height: auto;
+  width: 70px;
+  padding: 11px;
+  padding-bottom:0px;
+}
+
+.pbutton-text{
+  /*border-radius: 50%;*/
+  color:white;
+  font-weight:900;
+}
+
+
 
 .contact-form-error {
   color: #c21f3a;
@@ -103,3 +131,42 @@ html {
   color: #c1c1c1;
 }
 
+
+@media only screen and (max-width: 768px) {
+
+
+  .section {
+    background-color: #2D3E50;
+  }
+  .alert {
+    padding-bottom: 25px;
+  }
+
+
+  .has-rounded-border {
+    border-radius: 0px;
+  }
+
+  .column {
+    padding:0rem;
+
+  }
+
+  .m-4 {
+    margin: 0.2rem;
+  }
+
+  .p-4 {
+    padding:0.2rem;
+  }
+
+  .section {
+    padding: 2.5rem 0rem 0rem;
+  }
+
+
+  #kc-content-wrapper {
+    padding-bottom: 30px;
+    background-color: #2d3e50;
+  }
+}
