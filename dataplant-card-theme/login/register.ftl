@@ -48,7 +48,6 @@
                                                 </div>
                                             </div>
 
-                                            <#--                                        TODO: anpassen -->
                                             <#if !realm.registrationEmailAsUsername>
                                                 <div class="${properties.kcFormGroupClass!}">
                                                     <div class="${properties.kcLabelWrapperClass!}">
