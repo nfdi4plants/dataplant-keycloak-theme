@@ -453,7 +453,7 @@
 
                                                 var input = document.getElementById('tagger');
 
-                                                var whitelist = ["Dataplant", "Biology", "Computer science", "De.nbi", "Galaxy", "Swobup", "Swate", "ARC", "Gitlab", "Storage", "Freiburg", "Lautern"]
+                                                var whitelist = ["Dataplant", "Biology", "Computer science", "De.nbi", "Galaxy", "Swobup", "Swate", "ARC", "Gitlab", "Storage", "Freiburg", "Lautern", "None"]
 
 
                                                 var tagify = new Tagify(input, {
