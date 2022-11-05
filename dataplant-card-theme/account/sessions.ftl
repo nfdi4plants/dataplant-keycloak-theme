@@ -55,13 +55,13 @@
 
                             <div class="list-item-content">
                                 <div class="list-item-title">Client</div>
-                                <div class="list-item-description">${msg("ip")}: ${session.ipAddress}</div>
-                                <div class="list-item-description">${msg("started")}: ${session.started?datetime}</div>
-                                <div class="list-item-description">${msg("lastAccess")}
-                                    : ${session.lastAccess?datetime}</div>
-                                <div class="list-item-description">${msg("expires")}: ${session.expires?datetime}</div>
+                                <div class="list-item-description"><strong>${msg("ip")}:</strong> ${session.ipAddress}</div>
+                                <div class="list-item-description"><strong>${msg("started")}:</strong> ${session.started?datetime}</div>
+                                <div class="list-item-description"><strong>${msg("lastAccess")}
+                                    :</strong> ${session.lastAccess?datetime}</div>
+                                <div class="list-item-description"><strong>${msg("expires")}:</strong> ${session.expires?datetime}</div>
                                 <#list session.clients as client>
-                                    <div class="list-item-description">${msg("clients")}: ${client}</div>
+                                    <div class="list-item-description"><strong>${msg("clients")}: </strong>${client}</div>
                                 </#list>
                             </div>
 

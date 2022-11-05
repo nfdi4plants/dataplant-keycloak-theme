@@ -53,7 +53,7 @@
                             <div class="list-item-image">
                                 <figure class="image is-32x32">
 
-                                    <img src="${url.resourcesPath}/img/pencil-solid.svg"
+                                    <img src="${url.resourcesPath}/img/circle-info-solid.svg"
                                          alt="Info" width="32" height="32"/>
                                 </figure>
                             </div>
