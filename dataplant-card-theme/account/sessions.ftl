@@ -40,7 +40,7 @@
         <div class="container has-rounded-border registercard">
             <article class="message is-info">
                 <div class="message-header">
-                    <p>Configured Authenticators</p>
+                    <p>Active Sessions</p>
                 </div>
                 <div class="list has-visible-pointer-controls">
                     <#list sessions.sessions as session>
