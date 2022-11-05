@@ -69,7 +69,7 @@
                     </#list>
                 </div>
 
-                <form action="${url.sessionsUrl}" method="post">
+                <form action="${url.sessionsUrl}" method="post" style="padding-left:10px; padding-bottom:10px">
                     <input type="hidden" id="stateChecker" name="stateChecker" value="${stateChecker}">
                     <#--        <button id="logout-all-sessions" class="btn btn-default">${msg("doLogOutAllSessions")}</button>-->
                     <button class="button is-rounded is-link" id="logout-all-sessions"
