@@ -3,7 +3,7 @@
 This is the official DataPLANT keycloak theme.
 
 ## Installation
-Create a jar file of the dataplant-card-theme folder or copy the dataplant-card-theme folder to the keycloak theme 
+Create a jar file of the dataplant-card-theme folder or copy the dataplant-card-theme folder to the Keycloak theme 
 folder.
 Activate the account, email and login-theme in the Keycloak admin GUI.
 
