@@ -431,11 +431,11 @@
                                     <li>
                                         <p>${msg("totpStep1")}</p>
 
-                                        <ul>
-                                            <#list totp.supportedApplications as app>
-                                                <li>${msg(app)}</li>
-                                            </#list>
-                                        </ul>
+<#--                                        <ul>-->
+<#--                                            <#list totp.supportedApplications as app>-->
+<#--                                                <li>${msg(app)}</li>-->
+<#--                                            </#list>-->
+<#--                                        </ul>-->
                                     </li>
 
 

@@ -43,6 +43,25 @@ body {
   height: 70px;
 }
 
+.provider-button-inverted {
+  border-radius: 1.2rem;
+  /*background-color: transparent;*/
+  background-color: #EEE;
+  width: 100px;
+  height: 100px;
+  border-color: #2D3E50;
+  border-width: 2px;
+  border-style: solid;
+  cursor:pointer;
+  margin-top: 4px;
+}
+
+.provider-button-inverted:hover{
+  box-shadow: 0 .8rem 1.5rem rgba(0,0,0,.1);
+  border-color: #666;
+  background-color: #ffffff1c;
+}
+
 .provider-button {
   border-radius: 1.2rem;
   background-color: transparent;
@@ -53,6 +72,12 @@ body {
   border-style: solid;
   cursor:pointer;
   margin-top: 4px;
+}
+
+.pbutton-text-inverted{
+  color: #2D3E50;
+  font-size: 12px;
+  font-weight: 900;
 }
 
 .provider-button:hover{
@@ -113,8 +138,9 @@ body {
 .button-area {
   display: flex;
   gap:10px;
-}
+  flex-wrap: wrap;
 
+}
 .container.mgmnt-area{
   display: flex;
   /*for menus, use row*/

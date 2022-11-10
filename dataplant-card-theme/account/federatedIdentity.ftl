@@ -215,15 +215,14 @@
                                     <h1 class="title is-4 is-darkblue-lighter-20">
                                         Link Providers
                                     </h1>
-                                    <div class="spacer"></div>
                                     <!--input fields-->
 
                                     <p>
                                         Click on the buttons below, to link an identity provider with your DataPLANT
                                         account.
-
-
                                     </p>
+
+                                    <div class="spacer"></div>
 
                                     <div class="row margin-bottom button-area">
                                         <#list federatedIdentity.identities as identity>
@@ -254,12 +253,12 @@
                                                            value="${identity.providerId!}">
                                                     <#--                                                    <button id="add-link-${identity.providerId!}" class="btn btn-default">${msg("doAdd")}</button>-->
 
-                                                    <button class="provider-button" id="add-link-${identity.providerId!}">
+                                                    <button class="provider-button-inverted" id="add-link-${identity.providerId!}">
                                                         <figure>
                                                             <img class="pbutton-img"
                                                                  src="${url.resourcesPath}/img/${identity.displayName!}.svg"/>
                                                         </figure>
-                                                        <p class="pbutton-text">${identity.displayName!}</p>
+                                                        <p class="pbutton-text-inverted">${identity.displayName!}</p>
                                                     </button>
 
                                                 </form>
@@ -283,7 +282,7 @@
                     <div class="column align-items-center">
                         <div class="container m-4 is-white">
                             <div class="content has-text-justified">
-                                <div class="spacer"></div>
+<#--                                <div class="spacer"></div>-->
                                 <h3 style="color:white; padding-top:1.9em">
                                     Link Provider
                                 </h3>
@@ -292,54 +291,37 @@
                                 <div style="height:10px"></div>
 
                                 <p>
-                                    Connect your account to established science portals. After connection you can also use these identy providers to login.
+                                    Connect your account to established science portals. After connecting, you can also use these identity providers to login.
                                 </p>
 
-                                <div class="row margin-bottom button-area">
-                                    <#list federatedIdentity.identities as identity>
+<#--                                <div class="row margin-bottom button-area">-->
+<#--                                    <#list federatedIdentity.identities as identity>-->
 
-                                    <#--                                        <div class="col-sm-2 col-md-2">-->
-                                    <#--                                            <label for="${identity.providerId!}" class="control-label">${identity.displayName!}</label>-->
-                                    <#--                                        </div>-->
-                                    <#--                                        <div class="col-sm-5 col-md-5">-->
-                                    <#--                                            <input disabled="true" class="form-control" value="${identity.userName!}">-->
-                                    <#--                                        </div>-->
+<#--                                        <#if !identity.connected>-->
+<#--                                            <form action="${url.socialUrl}" method="post" class="">-->
+<#--                                                <input type="hidden" id="stateChecker" name="stateChecker"-->
+<#--                                                       value="${stateChecker}">-->
+<#--                                                <input type="hidden" id="action" name="action" value="add">-->
+<#--                                                <input type="hidden" id="providerId" name="providerId"-->
+<#--                                                       value="${identity.providerId!}">-->
+<#--                                                &lt;#&ndash;                                                    <button id="add-link-${identity.providerId!}" class="btn btn-default">${msg("doAdd")}</button>&ndash;&gt;-->
 
-                                    <#--                                            <#if identity.connected>-->
-                                    <#--                                                <#if federatedIdentity.removeLinkPossible>-->
-                                    <#--                                                    <form action="${url.socialUrl}" method="post" class="form-inline">-->
-                                    <#--                                                        <input type="hidden" id="stateChecker" name="stateChecker" value="${stateChecker}">-->
-                                    <#--                                                        <input type="hidden" id="action" name="action" value="remove">-->
-                                    <#--                                                        <input type="hidden" id="providerId" name="providerId" value="${identity.providerId!}">-->
-                                    <#--                                                        <button id="remove-link-${identity.providerId!}" class="btn btn-default">${msg("doRemove")}</button>-->
-                                    <#--                                                    </form>-->
-                                    <#--                                                </#if>-->
-                                    <#--                                            <#else>-->
-                                        <#if !identity.connected>
-                                            <form action="${url.socialUrl}" method="post" class="">
-                                                <input type="hidden" id="stateChecker" name="stateChecker"
-                                                       value="${stateChecker}">
-                                                <input type="hidden" id="action" name="action" value="add">
-                                                <input type="hidden" id="providerId" name="providerId"
-                                                       value="${identity.providerId!}">
-                                                <#--                                                    <button id="add-link-${identity.providerId!}" class="btn btn-default">${msg("doAdd")}</button>-->
+<#--                                                <button class="provider-button" id="add-link-${identity.providerId!}">-->
+<#--                                                    <figure>-->
+<#--                                                        <img class="pbutton-img"-->
+<#--                                                             src="${url.resourcesPath}/img/${identity.displayName!}.svg"/>-->
+<#--                                                    </figure>-->
+<#--                                                    <p class="pbutton-text">${identity.displayName!}</p>-->
+<#--                                                </button>-->
 
-                                                <button class="provider-button" id="add-link-${identity.providerId!}">
-                                                    <figure>
-                                                        <img class="pbutton-img"
-                                                             src="${url.resourcesPath}/img/${identity.displayName!}.svg"/>
-                                                    </figure>
-                                                    <p class="pbutton-text">${identity.displayName!}</p>
-                                                </button>
+<#--                                            </form>-->
 
-                                            </form>
-
-                                        </#if>
+<#--                                        </#if>-->
 
 
 
-                                    </#list>
-                                </div>
+<#--                                    </#list>-->
+<#--                                </div>-->
                             </div>
                         </div>
                     </div>
