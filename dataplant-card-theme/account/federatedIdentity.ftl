@@ -224,6 +224,53 @@
 
 
                                     </p>
+
+                                    <div class="row margin-bottom button-area">
+                                        <#list federatedIdentity.identities as identity>
+
+                                        <#--                                        <div class="col-sm-2 col-md-2">-->
+                                        <#--                                            <label for="${identity.providerId!}" class="control-label">${identity.displayName!}</label>-->
+                                        <#--                                        </div>-->
+                                        <#--                                        <div class="col-sm-5 col-md-5">-->
+                                        <#--                                            <input disabled="true" class="form-control" value="${identity.userName!}">-->
+                                        <#--                                        </div>-->
+
+                                        <#--                                            <#if identity.connected>-->
+                                        <#--                                                <#if federatedIdentity.removeLinkPossible>-->
+                                        <#--                                                    <form action="${url.socialUrl}" method="post" class="form-inline">-->
+                                        <#--                                                        <input type="hidden" id="stateChecker" name="stateChecker" value="${stateChecker}">-->
+                                        <#--                                                        <input type="hidden" id="action" name="action" value="remove">-->
+                                        <#--                                                        <input type="hidden" id="providerId" name="providerId" value="${identity.providerId!}">-->
+                                        <#--                                                        <button id="remove-link-${identity.providerId!}" class="btn btn-default">${msg("doRemove")}</button>-->
+                                        <#--                                                    </form>-->
+                                        <#--                                                </#if>-->
+                                        <#--                                            <#else>-->
+                                            <#if !identity.connected>
+                                                <form action="${url.socialUrl}" method="post" class="">
+                                                    <input type="hidden" id="stateChecker" name="stateChecker"
+                                                           value="${stateChecker}">
+                                                    <input type="hidden" id="action" name="action" value="add">
+                                                    <input type="hidden" id="providerId" name="providerId"
+                                                           value="${identity.providerId!}">
+                                                    <#--                                                    <button id="add-link-${identity.providerId!}" class="btn btn-default">${msg("doAdd")}</button>-->
+
+                                                    <button class="provider-button" id="add-link-${identity.providerId!}">
+                                                        <figure>
+                                                            <img class="pbutton-img"
+                                                                 src="${url.resourcesPath}/img/${identity.displayName!}.svg"/>
+                                                        </figure>
+                                                        <p class="pbutton-text">${identity.displayName!}</p>
+                                                    </button>
+
+                                                </form>
+
+                                            </#if>
+
+
+
+                                        </#list>
+                                    </div>
+
                                     <div class="spacer"></div>
 
 
@@ -245,8 +292,7 @@
                                 <div style="height:10px"></div>
 
                                 <p>
-                                    Click on the buttons below, to link an identity provider with your DataPLANT
-                                    account.
+                                    Connect your account to established science portals. After connection you can also use these identy providers to login.
                                 </p>
 
                                 <div class="row margin-bottom button-area">

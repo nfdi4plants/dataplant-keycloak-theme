@@ -468,7 +468,7 @@
                                 <div class="container m-4 is-white">
                                     <div class="content has-text-justified">
                                         <p>
-                                            Please set a password for your Dataplant account.
+                                            Please set a password for your DataPLANT account.
                                         </p>
                                         <p>
                                             You can use this password

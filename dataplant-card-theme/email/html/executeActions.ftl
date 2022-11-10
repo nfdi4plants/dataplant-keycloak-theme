@@ -140,7 +140,7 @@
                                                         <td style="font-size: 0; line-height: 0;" width="20">&nbsp;</td>
                                                         <td>
                                                             <span class="icon" style="display:flex">
-                                                                <a href="mailto:dataplant@uni-kl.de">
+                                                                <a href="mailto:info@nfdi4plants.org">
                                                                     <img  src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAACXBIWXMAAACxAAAAsQHGLUmNAAAAGXRFWHRTb2Z0d2FyZQB3d3cuaW5rc2NhcGUub3Jnm+48GgAAAY1JREFUSImt1b9LVWEcx/EnyyhyEcJFuBA06dDoEoFC0OrgGg5Wf0DLddLBsRoFoaGhSXGQokXQTR0iaSj6QUMOKsStFu1CxsvheOnhep5zz9H7WQ7P83y+7+/3+Z7z5YTQZaGGl2hgppvgPszh0H/97gb4Aibw3Wl9PS98BBs54JZenxV8A0s5wIO29dOq4GuYxZ820BGWT56xHpQF9+A+9nKqbuIxfuSc3SkDH8V2osc/cRdvE+cDReCbWEwEwi5u4Xni/FcK3Cfrc7MA/kE2UFMFns1Un/cLgmAL10+qPyzwvYjhY3jfAQwruIp+fOvgnW7Bn5UAwwIuym76poR/vJWgUcI8G912pmRBQ3HAv4TpCI8i+L0Cb6y/uBy/g0HZlxMPSxMTkacmf5jy9CX1iV7BJNZwu20/NUx5epUcsETi+QpweNKK7SmZY6pSRSF8rpqgt22tg/9T1QSx3oUQaiGEeghhp1OCUop628RwtN8r+12uR56PlUuOgusFnmE8xOBZEmxgFZeqxh4DS11jrT/O+koAAAAASUVORK5CYII=" alt="Mail." width="auto" height="24"
                                                                         style="display: block;" border="0" />
                                                                 </a>

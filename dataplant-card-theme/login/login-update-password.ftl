@@ -23,7 +23,7 @@
                 <input class="input is-rounded" type="password" placeholder="${msg("updatePasswordTitle")}" tabindex="1" name="password-new" autofocus autocomplete="new-password" aria-invalid="<#if messagesPerField.existsError('password','password-confirm')>true</#if>"/>
               </div>
               <div class="field">
-                <input class="input is-rounded" placeholder="${msg("updatePasswordTitle")}" tabindex="2" name="password-confirm" type="password" autofocus autocomplete="new-password" aria-invalid="<#if messagesPerField.existsError('password-confirm')>true</#if>"
+                <input class="input is-rounded" placeholder="${msg("passwordNewConfirm")}" tabindex="2" name="password-confirm" type="password" autofocus autocomplete="new-password" aria-invalid="<#if messagesPerField.existsError('password-confirm')>true</#if>"
                     />
                     
                     <#if messagesPerField.existsError('password')>

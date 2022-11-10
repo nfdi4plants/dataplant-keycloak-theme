@@ -96,7 +96,7 @@
                                         <div class="col-sm-2 col-md-2">
 <#--                                            <label for="email" class="control-label">${msg("email")}</label> <span-->
 <#--                                                    class="required">*</span>-->
-                                            <label for="password" class="control-label">${msg("password")}</label>
+                                            <label for="password" class="control-label">${msg("currentPassword")}</label>
                                         </div>
 <#--                                        <input class="form-control input is-rounded" type="text" placeholder="email"-->
 <#--                                               id="email" name="email"-->
@@ -166,7 +166,7 @@
                                 <div style="height:10px"></div>
 
                                 <p>
-                                    Change your current password here. To set a new password your current password has to be entered.
+                                    Change your current password here. You need to enter your current password first.
                                 </p>
 
                                 <p>

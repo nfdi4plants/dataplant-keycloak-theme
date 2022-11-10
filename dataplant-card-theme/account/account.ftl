@@ -181,7 +181,7 @@
                                 <div style="height:10px"></div>
 
                                 <p>
-                                    Edit your Account details. Here you can change your first name, last name and if enabled, your email address.
+                                    Here you can change your first name and your last name.
 
                                 </p>
 
@@ -343,7 +343,7 @@
                         <div class="container m-4 is-white">
                             <div class="content has-text-justified">
                                 <h3 style="color:white; padding-top:1.9em">
-                                    Edit Institutional Address.
+                                    Edit institutional address
                                 </h3>
                                 <div style="height:10px; text-align:left"></div>
 

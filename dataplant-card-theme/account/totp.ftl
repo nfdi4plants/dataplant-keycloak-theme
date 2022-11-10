@@ -318,7 +318,7 @@
                                 <div class="container p-4">
                                     <h1 class="title is-4 is-darkblue is-uppercase"></h1>
                                     <h1 class="title is-4 is-darkblue-lighter-20">
-                                        Link authenticator application
+                                        Link Authenticator Application
                                     </h1>
                                     <#--                                    <div class="spacer"></div>-->
 
