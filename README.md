@@ -1,6 +1,6 @@
 # dataplant-keycloak-theme
 
-This is the official DataPLANT keycloak theme.
+This is the official DataPLANT Keycloak theme.
 
 ## Installation
 Create a jar file of the dataplant-card-theme folder or copy the dataplant-card-theme folder to the Keycloak theme 
