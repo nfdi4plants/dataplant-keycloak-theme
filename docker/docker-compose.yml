@@ -7,12 +7,7 @@ services:
     env_file:
       - .env.keycloak
     environment:
-      #      KC_HOSTNAME_STRICT: "false"
-      #      KC_HTTP_ENABLED: "true"
       PROXY_ADDRESS_FORWARDING: "false"
-      #      KEYCLOAK_FRONTEND_URL: "https://keycloak.bwidm2.escience.uni-freiburg.de/auth"
-#      JAVA_OPTS_APPEND: "-Dkeycloak.profile=preview"
-#    command: start --hostname=localhost:8080
     entrypoint: ["/opt/keycloak/bin/kc.sh", "start-dev"]
     ports:
       - 8080:8080
