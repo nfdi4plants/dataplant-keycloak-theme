@@ -35,7 +35,7 @@
 
                                     <div class="container p-4">
                                         <h1 class="title is-4 is-darkblue is-uppercase">
-                                            ${msg("emailVerifyInstruction2")}
+                                            ${msg("emailVerifyInstruction")}
                                         </h1>
                                         <h1 class="title is-4 is-darkblue-lighter-20">
                                             <#--                                            Reset your DataPLANT account password-->
@@ -45,7 +45,7 @@
                                         <div class="field">
 
                                             <p class="instruction">
-                                                ${msg("emailVerifyInstruction2")}
+                                                ${msg("emailVerifyInstruction")}
                                                 <br/>
                                                 <a href="${url.loginAction}">${msg("doClickHere")}</a> ${msg("emailVerifyInstruction3")}
                                             </p>
