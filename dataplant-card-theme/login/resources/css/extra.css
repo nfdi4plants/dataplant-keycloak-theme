@@ -61,6 +61,8 @@ padding-top: 150px;
 
 .button-area {
   display: flex;
+  gap:5px;
+  flex-wrap: wrap;
 }
 
 

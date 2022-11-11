@@ -106,7 +106,7 @@
                 <h4>${msg("identity-provider-login-label")}</h4>
             -->
 
-                                    <div class="${properties.kcFormSocialAccountListClass!} <#if social.providers?size gt 3>${properties.kcFormSocialAccountListGridClass!}</#if>"
+                                    <div class="button-area ${properties.kcFormSocialAccountListClass!} <#if social.providers?size gt 3>${properties.kcFormSocialAccountListGridClass!}</#if>"
                                          style="text-align:left">
                                         <#list social.providers as p>
                                             <button class="provider-button"
