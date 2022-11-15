@@ -1,8 +1,8 @@
  
 <mjml>
   <mj-head>
-    <mj-title>Discount Light</mj-title>
-    <mj-preview>Pre-header Text</mj-preview>
+    <mj-title>Welcome to DataPLANT</mj-title>
+    <mj-preview>You registered an account on DataPLANT. Please Verify your mail address.</mj-preview>
     <mj-attributes>
       <mj-all font-family="'Helvetica Neue', Helvetica, Arial, sans-serif"></mj-all>
       <mj-text font-weight="400" font-size="16px" color="#000000" line-height="24px" font-family="'Helvetica Neue', Helvetica, Arial, sans-serif"></mj-text>
@@ -31,13 +31,13 @@
   <mj-body background-color="#E7E7E7" width="600px">
     <mj-section full-width="full-width" background-color="#1F2B38" padding-bottom="0">
       <mj-column width="100%">
-        <mj-image src="https://s3.bwsfs.de/frct-public/Dataplant_logo.png" align="center" alt="" width="150px" />
+        <mj-image src="https://s3.bwsfs.de/frct-public/Dataplant_logo.png" align="center" alt="Dataplant Logo" width="150px" />
 
         <mj-text color="#ffffff" font-weight="bold" align="center" text-transform="uppercase" font-size="16px" letter-spacing="1px" padding-top="0px">
           <br />
         </mj-text>
 
-        <mj-image src="https://s3.bwsfs.de/frct-public/repeated_patterns.png" width="600px" alt="" padding="0" />
+        <mj-image src="https://s3.bwsfs.de/frct-public/repeated_patterns.png" width="600px" alt="Banner Top" padding="0" />
 
       </mj-column>
     </mj-section>
@@ -45,7 +45,7 @@
     </mj-section>
     <mj-section background-color="#2D3E50">
       <mj-column width="100%">
-        <mj-image src="https://s3.bwsfs.de/frct-public/banner-bottom.png" width="600px" alt="" padding="0" />
+        <mj-image src="https://s3.bwsfs.de/frct-public/banner-bottom.png" width="600px" alt="Banner Bottom" padding="0" />
       </mj-column>
     </mj-section>
 
@@ -62,11 +62,11 @@
             Before being able to use your account you need to verify that this is your email address by clicking the button below:
           </mj-text>
 
-          <mj-button background-color="#4FB3D9" align="center" color="#ffffff" font-size="17px" font-weight="bold" href="https://google.com" width="170px" border-radius="5px" padding-top="30px">
+          <mj-button background-color="#4FB3D9" align="center" color="#ffffff" font-size="17px" font-weight="bold" href="${kcSanitize(link)?no_esc}" width="170px" border-radius="5px" padding-top="30px">
             Verify eMail
           </mj-button>
           <mj-text color="#637381" font-size="14px" padding-bottom="20px" padding-top="0px" align="center">
-            This link will expire within 12 hours
+            This link will expire within ${kcSanitize(linkExpiration)?no_esc} hours
           </mj-text>
           <mj-text color="#637381" font-size="16px" padding-top="30px">
             After successful confirmation of your registration, you can immediately use our services.
@@ -89,14 +89,18 @@
       <mj-section>
         <mj-column width="100%" padding="0">
           <mj-social font-size="15px" icon-size="30px" mode="horizontal" padding="0" align="center" padding-bottom="5px">
-            <mj-social-element src="https://s3.bwsfs.de/frct-public/twitter.png" name="twitter" padding="0 10px 0 0" background-color="#A1A0A0" href="https://twitter.com/nfdi4plants">
+            <mj-social-element src="https://s3.bwsfs.de/frct-public/twitter.png"  alt="Twitter Logo" name="twitter" padding="0 10px 0 0" background-color="#A1A0A0" href="https://twitter.com/nfdi4plants">
             </mj-social-element>
 
-            <mj-social-element src="https://s3.bwsfs.de/frct-public/github.png" name="github" padding="0 10px 0 0" background-color="#A1A0A0" href="https://github.com/nfdi4plants">
+            <mj-social-element src="https://s3.bwsfs.de/frct-public/github.png"  alt="Github Logo" name="github" padding="0 10px 0 0" background-color="#A1A0A0" href="https://github.com/nfdi4plants">
             </mj-social-element>
 
-            <mj-social-element src="https://s3.bwsfs.de/frct-public/youtube.png" name="youtube" padding="0 10px 0 0" background-color="#A1A0A0" href="https://www.youtube.com/channel/UCrTBwQWOa0-aWYkwoY104Wg">
+            <mj-social-element src="https://s3.bwsfs.de/frct-public/youtube.png" alt="Youtube Logo" name="youtube" padding="0 10px 0 0" background-color="#A1A0A0" href="https://www.youtube.com/channel/UCrTBwQWOa0-aWYkwoY104Wg">
             </mj-social-element>
+
+                        <mj-social-element src="https://s3.bwsfs.de/frct-public/envelope.png" name="mail" padding="0 10px 0 0" background-color="#A1A0A0" href="mailto:info@nfdi4plants.org" alt="Mail Logo">
+            </mj-social-element>
+
           </mj-social>
 
           <mj-text color="#445566" font-size="11px" align="center" line-height="16px" padding-bottom="0px">
