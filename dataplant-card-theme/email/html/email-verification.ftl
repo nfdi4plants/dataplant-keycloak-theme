@@ -230,7 +230,7 @@
                               </tr>
                               <tr>
                                 <td align="center" style="font-size:0px;padding:10px 25px;padding-top:0px;padding-bottom:20px;word-break:break-word;">
-                                  <div style="font-family:'Helvetica Neue', Helvetica, Arial, sans-serif;font-size:14px;font-weight:400;line-height:24px;text-align:center;color:#637381;">This link will expire within ${kcSanitize(linkExpiration)?no_esc} hours</div>
+                                  <div style="font-family:'Helvetica Neue', Helvetica, Arial, sans-serif;font-size:14px;font-weight:400;line-height:24px;text-align:center;color:#637381;">This link will expire within ${kcSanitize(linkExpirationFormatter(linkExpiration))?no_esc}</div>
                                 </td>
                               </tr>
                               <tr>
