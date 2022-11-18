@@ -1,0 +1,6 @@
+{
+  "themes": [{
+    "name" : "dataplant-theme",
+    "types": [ "login", "account","email" ]
+  }]
+}
