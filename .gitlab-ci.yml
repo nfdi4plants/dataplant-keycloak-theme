@@ -25,6 +25,7 @@ build_job:
 
 release_job:
   stage: release
+  image: registry.gitlab.com/gitlab-org/release-cli:latest
   needs:
     - job: build_job
       artifacts: true
@@ -37,8 +38,8 @@ release_job:
     name: 'Dataplant Card Theme $CI_COMMIT_SHORT_SHA'
     description: 'Official Dataplant Keycloak theme'
     tag_name: '$CI_COMMIT_SHORT_SHA'
-    assets:
-      links:
-        - name: 'Jar File'
-          url: 'https://gitlab.com/codemancers/engineering/cw/-/jobs/${GE_JOB_ID}/artifacts/file/dist/cloudwatch-macos'
+#    assets:
+#      links:
+#        - name: 'Jar File'
+#          url: 'https://gitlab.com/codemancers/engineering/cw/-/jobs/${GE_JOB_ID}/artifacts/file/dist/cloudwatch-macos'
 
