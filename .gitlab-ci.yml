@@ -1,6 +1,7 @@
 stages:
   - build
   - release
+  - release_package
 
 build_job:
   stage: build
@@ -10,10 +11,7 @@ build_job:
     - echo GE_JOB_ID=$CI_JOB_ID >> generate_jar.env
   script:
     - apk --update add openjdk11
-    - ls -lah
     - mkdir -p build/META-INF
-    - ls -lah
-    - ls -lah build/
     - cp keycloak-themes.json build/META-INF/
     - cp -r dataplant-card-theme build/theme
     - ls -lah build/META-INF
@@ -47,4 +45,12 @@ release_job:
       links:
         - name: 'Jar File'
           url: 'https://git.bwcloud.uni-freiburg.de/marcel/dataplant-keycloak-theme/-/jobs/${GE_JOB_ID}/artifacts/file/build/dataplant-card-theme.jar'
+
+release_package:
+  stage: release_package
+  needs:
+    - job: build_job
+      artifacts: true
+  script:
+    - 'curl --header "JOB-TOKEN: $CI_JOB_TOKEN" --upload-file build/dataplant-card-theme.jar "${CI_API_V4_URL}/projects/${CI_PROJECT_ID}/packages/generic/Dataplant-Card-Theme/latest/dataplant-card-theme.jar"'
 
