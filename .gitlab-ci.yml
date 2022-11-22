@@ -25,7 +25,7 @@ build_job:
     - echo "Theme Jar file generated successfully."
   artifacts:
     paths:
-      - theme/dataplant-card-theme.jar
+      - dataplant-card-theme.jar
     reports:
       dotenv:  generate_jar.env
 
