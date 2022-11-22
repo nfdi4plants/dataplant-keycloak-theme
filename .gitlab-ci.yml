@@ -47,5 +47,5 @@ release_job:
     assets:
       links:
         - name: 'Jar File'
-          url: 'https://git.bwcloud.uni-freiburg.de/marcel/dataplant-keycloak-theme/-/jobs/${GE_JOB_ID}/artifacts/file/dataplant-card-theme.jar'
+          url: 'https://git.bwcloud.uni-freiburg.de/marcel/dataplant-keycloak-theme/-/jobs/${GE_JOB_ID}/artifacts/file/build/dataplant-card-theme.jar'
 
