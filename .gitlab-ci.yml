@@ -13,8 +13,9 @@ build_job:
     - ls -lah
     - mkdir theme
     - mkdir theme/META-INF
+    - cp dataplant-card-theme theme/
     - mkdir theme/theme
-    - cd theme/
+    - cd theme/theme
     - jar cvf dataplant-card-theme.jar *
     - echo "Theme Jar file generated successfully."
   artifacts:
