@@ -13,7 +13,7 @@ build_job:
     - cd .theme/
     - jar cvf dataplant-card-theme.jar *
   artifacts:
-    file:
+    paths:
       - dataplant-card-theme.jar
 
 release_job:
