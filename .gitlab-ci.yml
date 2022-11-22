@@ -16,7 +16,7 @@ build_job:
     - ls -lah
     - ls -lah theme/
     - cp keycloak-themes.json theme/META-INF/
-    - cp -r dataplant-card-theme theme/
+    - cp -r dataplant-card-theme theme/theme
     - ls -lah theme/META-INF
     - ls -lah theme/
     - cd theme/
