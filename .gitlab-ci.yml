@@ -52,5 +52,6 @@ release_package:
     - job: build_job
       artifacts: true
   script:
+    - apk --update add curl
     - 'curl --header "JOB-TOKEN: $CI_JOB_TOKEN" --upload-file build/dataplant-card-theme.jar "${CI_API_V4_URL}/projects/${CI_PROJECT_ID}/packages/generic/Dataplant-Card-Theme/latest/dataplant-card-theme.jar"'
 
