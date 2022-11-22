@@ -6,20 +6,15 @@ build:
   stage: build
   script:
     - apk --update add openjdk11
-#    - ls -lah
-#    - mkdir .theme
-#    - mkdir .theme/META-INF
-#    - mkdir .theme/theme
-#    - cd .theme/
-#    - jar cvf dataplant-card-theme.jar *
-#    - ls -lah
-#    - cp dataplant-card-theme.jar dst/
     - ls -lah
-  cache:
-    #key: "$CI_COMMIT_REF_NAME"
-    #policy: push
-    paths:
-      - dst
+    - mkdir .theme
+    - mkdir .theme/META-INF
+    - mkdir .theme/theme
+    - cd .theme/
+    - jar cvf dataplant-card-theme.jar *
+    - ls -lah
+    - cp dataplant-card-theme.jar dst/
+    - ls -lah
   artifacts:
     paths:
       - dst
