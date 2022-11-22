@@ -109,7 +109,7 @@
                                   <tbody>
                                     <tr>
                                       <td style="width:150px;">
-                                        <img alt="Dataplant Logo" height="auto" src="https://frct-nfdi4plants.s3.bwsfs.de/images/Dataplant_logo.png" style="border:0;display:block;outline:none;text-decoration:none;height:auto;width:100%;font-size:13px;" width="150">
+                                        <img alt="Dataplant Logo" height="auto" src="https://files.nfdi4plants.org/images/Dataplant_logo.png" style="border:0;display:block;outline:none;text-decoration:none;height:auto;width:100%;font-size:13px;" width="150">
                                       </td>
                                     </tr>
                                   </tbody>
@@ -150,7 +150,7 @@
                                   <tbody>
                                     <tr>
                                       <td style="width:600px;">
-                                        <img alt="banner_top" height="auto" src="https://frct-nfdi4plants.s3.bwsfs.de/images/banner-top.png" style="border:0;display:block;outline:none;text-decoration:none;height:auto;width:100%;font-size:13px;" width="600">
+                                        <img alt="banner_top" height="auto" src="https://files.nfdi4plants.org/images/banner-top.png" style="border:0;display:block;outline:none;text-decoration:none;height:auto;width:100%;font-size:13px;" width="600">
                                       </td>
                                     </tr>
                                   </tbody>
@@ -187,7 +187,7 @@
                           <tbody>
                             <tr>
                               <td style="width:600px;">
-                                <img alt="banner_bottom" height="auto" src="https://frct-nfdi4plants.s3.bwsfs.de/images/banner-bottom.png" style="border:0;display:block;outline:none;text-decoration:none;height:auto;width:100%;font-size:13px;" width="600">
+                                <img alt="banner_bottom" height="auto" src="https://files.nfdi4plants.org/images/banner-bottom.png" style="border:0;display:block;outline:none;text-decoration:none;height:auto;width:100%;font-size:13px;" width="600">
                               </td>
                             </tr>
                           </tbody>
@@ -279,7 +279,7 @@
                                                           <tr>
                                                             <td style="font-size:0;height:30px;vertical-align:middle;width:30px;">
                                                               <a href="https://twitter.com/intent/tweet?url=https://twitter.com/nfdi4plants" target="_blank">
-                                                                <img alt="twitter" height="30" src="https://frct-nfdi4plants.s3.bwsfs.de/images/twitter.png" style="border-radius:3px;display:block;" width="30">
+                                                                <img alt="twitter" height="30" src="https://files.nfdi4plants.org/images/twitter.png" style="border-radius:3px;display:block;" width="30">
                                                               </a>
                                                             </td>
                                                           </tr>
@@ -295,7 +295,7 @@
                                                           <tr>
                                                             <td style="font-size:0;height:30px;vertical-align:middle;width:30px;">
                                                               <a href="https://github.com/nfdi4plants" target="_blank">
-                                                                <img alt="github" height="30" src="https://frct-nfdi4plants.s3.bwsfs.de/images/github.png" style="border-radius:3px;display:block;" width="30">
+                                                                <img alt="github" height="30" src="https://files.nfdi4plants.org/images/github.png" style="border-radius:3px;display:block;" width="30">
                                                               </a>
                                                             </td>
                                                           </tr>
@@ -311,7 +311,7 @@
                                                           <tr>
                                                             <td style="font-size:0;height:30px;vertical-align:middle;width:30px;">
                                                               <a href="https://www.youtube.com/channel/UCrTBwQWOa0-aWYkwoY104Wg" target="_blank">
-                                                                <img alt="youtube" height="30" src="https://frct-nfdi4plants.s3.bwsfs.de/images/youtube.png" style="border-radius:3px;display:block;" width="30">
+                                                                <img alt="youtube" height="30" src="https://files.nfdi4plants.org/images/youtube.png" style="border-radius:3px;display:block;" width="30">
                                                               </a>
                                                             </td>
                                                           </tr>
@@ -327,7 +327,7 @@
                                                           <tr>
                                                             <td style="font-size:0;height:30px;vertical-align:middle;width:30px;">
                                                               <a href="mailto:info@nfdi4plants.org" target="_blank">
-                                                                <img alt="mail" height="30" src="https://frct-nfdi4plants.s3.bwsfs.de/images/envelope.png" style="border-radius:3px;display:block;" width="30">
+                                                                <img alt="mail" height="30" src="https://files.nfdi4plants.org/images/envelope.png" style="border-radius:3px;display:block;" width="30">
                                                               </a>
                                                             </td>
                                                           </tr>
