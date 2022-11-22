@@ -14,7 +14,7 @@ build_job:
     - jar cvf dataplant-card-theme.jar *
   artifacts:
     paths:
-      - dataplant-card-theme.jar
+      - .theme/dataplant-card-theme.jar
 
 release_job:
   stage: release
