@@ -1,0 +1,21 @@
+stages:
+  - build
+
+
+build:
+  stage: build
+  script:
+    - ls -lah
+    - mkdir .theme
+    - mkdir .theme/META-INF
+    - mkdir .theme/theme
+    - cd .theme/
+    - jar cvf .dataplant-card-theme.jar *
+  cache:
+    #key: "$CI_COMMIT_REF_NAME"
+    #policy: push
+    paths:
+      - .theme
+  artifacts:
+    paths:
+      - dataplant-card-theme.jar

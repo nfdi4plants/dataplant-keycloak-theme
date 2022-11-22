@@ -1,6 +1,6 @@
 {
   "themes": [{
-    "name" : "dataplant-theme",
+    "name" : "Dataplant Card Theme",
     "types": [ "login", "account","email" ]
   }]
 }
