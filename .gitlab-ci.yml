@@ -1,8 +1,8 @@
 stages:
   - build
+  - release
 
-
-build:
+build_job:
   stage: build
   script:
     - apk --update add openjdk11
@@ -12,9 +12,11 @@ build:
     - mkdir .theme/theme
     - cd .theme/
     - jar cvf dataplant-card-theme.jar *
-    - ls -lah
-    - cp dataplant-card-theme.jar dst/
-    - ls -lah
   artifacts:
-    paths:
-      - dst
+    file:
+      - dataplant-card-theme.jar
+
+release_job:
+  stage: release
+  script:
+    - ls -lah
