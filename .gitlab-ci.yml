@@ -12,6 +12,7 @@ build:
     - mkdir .theme/theme
     - cd .theme/
     - jar cvf .dataplant-card-theme.jar *
+    - ls -lah
   cache:
     #key: "$CI_COMMIT_REF_NAME"
     #policy: push
