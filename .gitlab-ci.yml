@@ -20,6 +20,7 @@ build_job:
     - ls -lah theme/META-INF
     - ls -lah theme/
     - jar cvf dataplant-card-theme.jar *
+    - ls -lah theme/
     - echo "Theme Jar file generated successfully."
   artifacts:
     paths:
