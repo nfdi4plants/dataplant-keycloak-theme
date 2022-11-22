@@ -38,8 +38,8 @@ release_job:
     name: 'Dataplant Card Theme $CI_COMMIT_SHORT_SHA'
     description: 'Official Dataplant Keycloak theme'
     tag_name: '$CI_COMMIT_SHORT_SHA'
-#    assets:
-#      links:
-#        - name: 'Jar File'
-#          url: 'https://gitlab.com/codemancers/engineering/cw/-/jobs/${GE_JOB_ID}/artifacts/file/dist/cloudwatch-macos'
+    assets:
+      links:
+        - name: 'Jar File'
+          url: 'https://git.bwcloud.uni-freiburg.de//marcel/dataplant-keycloak-theme/-/jobs/${GE_JOB_ID}/artifacts/file/theme/dataplant-card-theme.jar'
 
