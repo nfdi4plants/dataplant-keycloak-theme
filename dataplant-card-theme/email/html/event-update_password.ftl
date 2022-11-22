@@ -109,7 +109,7 @@
                                                     <tbody>
                                                     <tr>
                                                         <td style="width:150px;">
-                                                            <img alt="Dataplant Logo" height="auto" src="https://files.nfdi4plants.org/Dataplant_logo.png" style="border:0;display:block;outline:none;text-decoration:none;height:auto;width:100%;font-size:13px;" width="150">
+                                                            <img alt="Dataplant Logo" height="auto" src="https://files.nfdi4plants.org/images/Dataplant_logo.png" style="border:0;display:block;outline:none;text-decoration:none;height:auto;width:100%;font-size:13px;" width="150">
                                                         </td>
                                                     </tr>
                                                     </tbody>
@@ -127,7 +127,7 @@
                                                     <tbody>
                                                     <tr>
                                                         <td style="width:600px;">
-                                                            <img alt="Banner Top" height="auto" src="https://files.nfdi4plants.org/repeated_patterns.png" style="border:0;display:block;outline:none;text-decoration:none;height:auto;width:100%;font-size:13px;" width="600">
+                                                            <img alt="Banner Top" height="auto" src="https://files.nfdi4plants.org/images/banner-top.png" style="border:0;display:block;outline:none;text-decoration:none;height:auto;width:100%;font-size:13px;" width="600">
                                                         </td>
                                                     </tr>
                                                     </tbody>
@@ -164,7 +164,7 @@
                                         <tbody>
                                         <tr>
                                             <td style="width:600px;">
-                                                <img alt="Banner Bottom" height="auto" src="https://files.nfdi4plants.org/banner-bottom.png" style="border:0;display:block;outline:none;text-decoration:none;height:auto;width:100%;font-size:13px;" width="600">
+                                                <img alt="Banner Bottom" height="auto" src="https://files.nfdi4plants.org/images/banner-bottom.png" style="border:0;display:block;outline:none;text-decoration:none;height:auto;width:100%;font-size:13px;" width="600">
                                             </td>
                                         </tr>
                                         </tbody>
@@ -207,13 +207,8 @@
                                                 </td>
                                             </tr>
                                             <tr>
-                                                <td align="center" style="font-size:0px;padding:10px 25px;padding-top:50px;word-break:break-word;">
-                                                    <div style="font-family:'Helvetica Neue', Helvetica, Arial, sans-serif;font-size:16px;font-weight:400;line-height:24px;text-align:center;color:#637381;">The password change was initiated at ${kcSanitize(event.date)?no_esc} from the IP address:</div>
-                                                </td>
-                                            </tr>
-                                            <tr>
-                                                <td align="center" style="font-size:0px;padding:10px 25px;padding-bottom:50px;word-break:break-word;">
-                                                    <div style="font-family:'Helvetica Neue', Helvetica, Arial, sans-serif;font-size:16px;font-weight:900;line-height:24px;text-align:center;color:#637381;">${kcSanitize(event.ipAddress)?no_esc}</div>
+                                                <td align="center" style="font-size:0px;padding:10px 25px;padding-top:30px;word-break:break-word;">
+                                                    <div style="font-family:'Helvetica Neue', Helvetica, Arial, sans-serif;font-size:16px;font-weight:400;line-height:24px;text-align:center;color:#637381;">The password change was initiated at ${kcSanitize(event.date)?no_esc} from the IP address ${kcSanitize(event.ipAddress)?no_esc}.</div>
                                                 </td>
                                             </tr>
                                             <tr>
@@ -281,7 +276,7 @@
                                                                                             <tr>
                                                                                                 <td style="font-size:0;height:30px;vertical-align:middle;width:30px;">
                                                                                                     <a href="https://twitter.com/intent/tweet?url=https://twitter.com/nfdi4plants" target="_blank">
-                                                                                                        <img alt="Twitter Logo" height="30" src="https://files.nfdi4plants.org/twitter.png" style="border-radius:3px;display:block;" width="30">
+                                                                                                        <img alt="Twitter Logo" height="30" src="https://files.nfdi4plants.org/images/twitter.png" style="border-radius:3px;display:block;" width="30">
                                                                                                     </a>
                                                                                                 </td>
                                                                                             </tr>
@@ -297,7 +292,7 @@
                                                                                             <tr>
                                                                                                 <td style="font-size:0;height:30px;vertical-align:middle;width:30px;">
                                                                                                     <a href="https://github.com/nfdi4plants" target="_blank">
-                                                                                                        <img alt="Github Logo" height="30" src="https://files.nfdi4plants.org/github.png" style="border-radius:3px;display:block;" width="30">
+                                                                                                        <img alt="Github Logo" height="30" src="https://files.nfdi4plants.org/images/github.png" style="border-radius:3px;display:block;" width="30">
                                                                                                     </a>
                                                                                                 </td>
                                                                                             </tr>
@@ -313,7 +308,7 @@
                                                                                             <tr>
                                                                                                 <td style="font-size:0;height:30px;vertical-align:middle;width:30px;">
                                                                                                     <a href="https://www.youtube.com/channel/UCrTBwQWOa0-aWYkwoY104Wg" target="_blank">
-                                                                                                        <img alt="Youtube Logo" height="30" src="https://files.nfdi4plants.org/youtube.png" style="border-radius:3px;display:block;" width="30">
+                                                                                                        <img alt="Youtube Logo" height="30" src="https://files.nfdi4plants.org/images/youtube.png" style="border-radius:3px;display:block;" width="30">
                                                                                                     </a>
                                                                                                 </td>
                                                                                             </tr>
@@ -329,7 +324,7 @@
                                                                                             <tr>
                                                                                                 <td style="font-size:0;height:30px;vertical-align:middle;width:30px;">
                                                                                                     <a href="mailto:info@nfdi4plants.org" target="_blank">
-                                                                                                        <img alt="Mail Logo" height="30" src="https://files.nfdi4plants.org/envelope.png" style="border-radius:3px;display:block;" width="30">
+                                                                                                        <img alt="Mail Logo" height="30" src="https://files.nfdi4plants.org/images/envelope.png" style="border-radius:3px;display:block;" width="30">
                                                                                                     </a>
                                                                                                 </td>
                                                                                             </tr>
