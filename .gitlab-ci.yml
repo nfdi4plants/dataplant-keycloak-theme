@@ -13,7 +13,8 @@ build_job:
     - ls -lah
     - mkdir theme
     - mkdir theme/META-INF
-    - cp -r .dataplant-card-theme theme/
+    - ls -lah
+    - cp -r dataplant-card-theme theme/
     - mkdir theme/theme
     - cd theme/theme
     - jar cvf dataplant-card-theme.jar *
