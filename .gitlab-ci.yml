@@ -14,11 +14,12 @@ build:
     - jar cvf dataplant-card-theme.jar *
     - ls -lah
     - cp dataplant-card-theme.jar dst/
+    - ls -lah
   cache:
     #key: "$CI_COMMIT_REF_NAME"
     #policy: push
     paths:
-      - .theme
+      - dst
   artifacts:
     paths:
       - dst
