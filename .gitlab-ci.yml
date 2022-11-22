@@ -11,22 +11,21 @@ build_job:
   script:
     - apk --update add openjdk11
     - ls -lah
-    - mkdir theme
-    - mkdir theme/META-INF
+    - mkdir -p build/META-INF
     - ls -lah
-    - ls -lah theme/
-    - cp keycloak-themes.json theme/META-INF/
-    - cp -r dataplant-card-theme theme/theme
-    - ls -lah theme/META-INF
-    - ls -lah theme/
-    - cd theme/
-    - jar cvf .dataplant-card-theme.jar *
-    - ls -lah theme/
+    - ls -lah build/
+    - cp keycloak-themes.json build/META-INF/
+    - cp -r dataplant-card-theme build/theme
+    - ls -lah build/META-INF
+    - ls -lah build/
+    - cd build/
+    - jar cvf dataplant-card-theme.jar *
+    - ls -lah build/
     - ls -lah
     - echo "Theme Jar file generated successfully."
   artifacts:
     paths:
-      - dataplant-card-theme.jar
+      - build/dataplant-card-theme.jar
     reports:
       dotenv:  generate_jar.env
 
