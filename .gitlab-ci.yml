@@ -7,7 +7,7 @@ build:
   script:
     - apk --update add openjdk11
     - ls -lah
-    - mkdir .theme
+#    - mkdir .theme
     - mkdir .theme/META-INF
     - mkdir .theme/theme
     - cd .theme/
