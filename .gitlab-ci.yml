@@ -5,7 +5,7 @@ stages:
 build:
   stage: build
   script:
-    - apk --update add openjdk8-jdk
+    - apk --update add openjdk11
     - ls -lah
     - mkdir .theme
     - mkdir .theme/META-INF
