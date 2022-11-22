@@ -20,7 +20,7 @@ build_job:
     - ls -lah theme/META-INF
     - ls -lah theme/
     - cd theme/
-    - jar cvf dataplant-card-theme.jar *
+    - jar cvf .dataplant-card-theme.jar *
     - ls -lah theme/
     - ls -lah
     - echo "Theme Jar file generated successfully."
@@ -48,5 +48,5 @@ release_job:
     assets:
       links:
         - name: 'Jar File'
-          url: 'https://git.bwcloud.uni-freiburg.de/marcel/dataplant-keycloak-theme/-/jobs/${GE_JOB_ID}/artifacts/file/theme/dataplant-card-theme.jar'
+          url: 'https://git.bwcloud.uni-freiburg.de/marcel/dataplant-keycloak-theme/-/jobs/${GE_JOB_ID}/artifacts/file/dataplant-card-theme.jar'
 
