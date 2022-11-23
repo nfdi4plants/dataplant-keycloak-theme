@@ -70,9 +70,6 @@
             <mj-social-element src="https://files.nfdi4plants.org/images/github.png" name="github" padding="0 10px 0 0" background-color="#A1A0A0" href="https://github.com/nfdi4plants" alt="github">
             </mj-social-element>
 
-            <mj-social-element src="https://files.nfdi4plants.org/images/youtube.png" name="youtube" padding="0 10px 0 0" background-color="#A1A0A0" href="https://www.youtube.com/channel/UCrTBwQWOa0-aWYkwoY104Wg" alt="youtube">
-            </mj-social-element>
-
             <mj-social-element src="https://files.nfdi4plants.org/images/envelope.png" name="mail" padding="0 10px 0 0" background-color="#A1A0A0" href="mailto:info@nfdi4plants.org" alt="mail">
             </mj-social-element>
 

@@ -95,10 +95,7 @@
             <mj-social-element src="https://files.nfdi4plants.org/images/github.png"  alt="Github Logo" name="github" padding="0 10px 0 0" background-color="#A1A0A0" href="https://github.com/nfdi4plants">
             </mj-social-element>
 
-            <mj-social-element src="https://files.nfdi4plants.org/images/youtube.png" alt="Youtube Logo" name="youtube" padding="0 10px 0 0" background-color="#A1A0A0" href="https://www.youtube.com/channel/UCrTBwQWOa0-aWYkwoY104Wg">
-            </mj-social-element>
-
-                        <mj-social-element src="https://files.nfdi4plants.org/images/envelope.png" name="mail" padding="0 10px 0 0" background-color="#A1A0A0" href="mailto:info@nfdi4plants.org" alt="Mail Logo">
+            <mj-social-element src="https://files.nfdi4plants.org/images/envelope.png" name="mail" padding="0 10px 0 0" background-color="#A1A0A0" href="mailto:info@nfdi4plants.org" alt="Mail Logo">
             </mj-social-element>
 
           </mj-social>

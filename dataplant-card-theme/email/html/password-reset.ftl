@@ -318,22 +318,6 @@
                                             <table border="0" cellpadding="0" cellspacing="0" role="presentation" style="background:#A1A0A0;border-radius:3px;width:30px;">
                                               <tr>
                                                 <td style="font-size:0;height:30px;vertical-align:middle;width:30px;">
-                                                  <a href="https://www.youtube.com/channel/UCrTBwQWOa0-aWYkwoY104Wg" target="_blank">
-                                                    <img alt="Youtube Logo" height="30" src="https://files.nfdi4plants.org/images/youtube.png" style="border-radius:3px;display:block;" width="30">
-                                                  </a>
-                                                </td>
-                                              </tr>
-                                            </table>
-                                          </td>
-                                        </tr>
-                                      </table>
-                                      <!--[if mso | IE]></td><td><![endif]-->
-                                      <table align="center" border="0" cellpadding="0" cellspacing="0" role="presentation" style="float:none;display:inline-table;">
-                                        <tr>
-                                          <td style="padding:0 10px 0 0;vertical-align:middle;">
-                                            <table border="0" cellpadding="0" cellspacing="0" role="presentation" style="background:#A1A0A0;border-radius:3px;width:30px;">
-                                              <tr>
-                                                <td style="font-size:0;height:30px;vertical-align:middle;width:30px;">
                                                   <a href="mailto:info@nfdi4plants.org" target="_blank">
                                                     <img alt="Mail Logo" height="30" src="https://files.nfdi4plants.org/images/envelope.png" style="border-radius:3px;display:block;" width="30">
                                                   </a>
