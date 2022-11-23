@@ -162,8 +162,7 @@
                                                 </div>
 
                                                 <div class="list-item-content">
-                                                    <label for="${identity.providerId!}"
-                                                           class="control-label">${identity.displayName!}</label>
+                                                    <p for="${identity.providerId!}">${identity.displayName!}</p>
                                                 </div>
 
                                                 <div class="list-item-controls">
@@ -208,7 +207,7 @@
                 <div class="columns">
                     <div class="column align-items-top pb-5">
                         <div class="container box has-bg-white m-4 p-0">
-                            <form action="${url.passwordUrl}" method="post">
+                            <form action="${url.socialUrl}" method="post">
 
                                 <div class="container p-4">
                                     <h1 class="title is-4 is-darkblue is-uppercase"></h1>
