@@ -114,7 +114,7 @@
 
                                         <input class="form-control input is-rounded" type="text" placeholder="firstName"
                                                id="firstName" name="firstName"
-                                               value="${(account.firstName!'')}"/>
+                                               value="${(account.firstName!'')}" />
 
                                     </div>
                                     <div class="field">

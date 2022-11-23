@@ -157,7 +157,7 @@
                                             </nav>
                                         </div>
                                     </div>
-                                    <progress title="1/4" class="progress myprogress" value="1" max="4">25%
+                                    <progress title="1/2" class="progress myprogress" value="1" max="2">50%
                                     </progress>
                                 </div>
                             </div>
@@ -178,193 +178,9 @@
                         </div>
                     </div>
                     <!--END 1st card ui-->
+
                     <!--2nd card ui-->
                     <div id="card2" style="display: none">
-                        <div class="columns">
-                            <div class="column align-items-top pb-5">
-                                <div class="container box has-bg-white m-4 p-0">
-                                    <div class="container p-4">
-                                        <h1 class="title is-4 is-lightblue is-uppercase">
-                                            Sign up
-                                        </h1>
-                                        <h1 class="title is-4">
-                                            Address details
-                                        </h1>
-                                        <!--input fields-->
-
-                                        <div class="field">
-                                            <div class="${properties.kcFormGroupClass!}">
-                                                <div class="${properties.kcInputWrapperClass!}">
-                                                    <input type="text" id="institution"
-                                                           class="${properties.kcInputClass!} input is-rounded"
-                                                           id="user.attributes.institution" placeholder="Institution"
-                                                           name="user.attributes.institution"
-<#--                                                           value="${(register.formData['user.attributes.institution']!'')}"-->
-                                                           value="${(user.attributes.institution!'')}"
-                                                           aria-invalid="<#if messagesPerField.existsError('institution')>true</#if>"/>
-                                                    <p id="form-error-institution" class="contact-form-error">Last name
-                                                        is required</p>
-                                                </div>
-                                            </div>
-                                        </div>
-
-                                        <div class="field">
-                                            <div class="${properties.kcFormGroupClass!}">
-                                                <div class="${properties.kcInputWrapperClass!}">
-                                                    <input type="text" id="department"
-                                                           class="${properties.kcInputClass!} input is-rounded"
-                                                           id="user.attributes.department" placeholder="Department"
-                                                           name="user.attributes.department"
-                                                           value="${(user.attributes.department!'')}"
-                                                           aria-invalid="<#if messagesPerField.existsError('department')>true</#if>"/>
-                                                    <p id="form-error-department" class="contact-form-error">Department
-                                                        is required</p>
-                                                </div>
-                                            </div>
-                                        </div>
-
-                                        <div class="field">
-                                            <div class="${properties.kcFormGroupClass!}">
-                                                <div class="${properties.kcInputWrapperClass!}">
-                                                    <input type="text" id="country"
-                                                           class="${properties.kcInputClass!} input is-rounded"
-                                                           id="user.attributes.country" placeholder="Country"
-                                                           name="user.attributes.country"
-                                                           value="${(user.attributes.country!'')}"
-                                                           aria-invalid="<#if messagesPerField.existsError('country')>true</#if>"/>
-                                                    <p id="form-error-country" class="contact-form-error">Country is
-                                                        required</p>
-                                                </div>
-                                            </div>
-                                        </div>
-
-                                        <div class="field">
-                                            <div class="${properties.kcFormGroupClass!}">
-                                                <div class="${properties.kcInputWrapperClass!}">
-                                                    <input type="text" id="state"
-                                                           class="${properties.kcInputClass!} input is-rounded"
-                                                           id="user.attributes.state" placeholder="State"
-                                                           name="user.attributes.state"
-                                                           value="${(user.attributes.state!'')}"
-                                                           aria-invalid="<#if messagesPerField.existsError('state')>true</#if>"/>
-                                                    <p id="form-error-state" class="contact-form-error">State is
-                                                        required</p>
-                                                </div>
-                                            </div>
-                                        </div>
-
-                                        <div class="field">
-                                            <div class="${properties.kcFormGroupClass!}">
-                                                <div class="${properties.kcInputWrapperClass!}">
-                                                    <input type="text" id="zipcode"
-                                                           class="${properties.kcInputClass!} input is-rounded"
-                                                           id="user.attributes.zipcode" placeholder="Zipcode"
-                                                           name="user.attributes.zipcode"
-                                                           value="${(user.attributes.zipcode!'')}"
-                                                           aria-invalid="<#if messagesPerField.existsError('zipcode')>true</#if>"/>
-                                                    <p id="form-error-zipcode" class="contact-form-error">Zipcode is
-                                                        required</p>
-                                                </div>
-                                            </div>
-                                        </div>
-
-                                        <div class="field">
-                                            <div class="${properties.kcFormGroupClass!}">
-                                                <div class="${properties.kcInputWrapperClass!}">
-                                                    <input type="text" id="city"
-                                                           class="${properties.kcInputClass!} input is-rounded"
-                                                           id="user.attributes.city" placeholder="City"
-                                                           name="user.attributes.city"
-                                                           value="${(user.attributes.city!'')}"
-                                                           aria-invalid="<#if messagesPerField.existsError('city')>true</#if>"/>
-                                                    <p id="form-error-city" class="contact-form-error">City is
-                                                        required</p>
-                                                </div>
-                                            </div>
-                                        </div>
-
-                                        <div class="field">
-                                            <div class="${properties.kcFormGroupClass!}">
-                                                <div class="${properties.kcInputWrapperClass!}">
-                                                    <input type="text" id="address"
-                                                           class="${properties.kcInputClass!} input is-rounded"
-                                                           id="user.attributes.state" placeholder="Address"
-                                                           name="user.attributes.address"
-                                                           value="${(user.attributes.address!'')}"
-                                                           aria-invalid="<#if messagesPerField.existsError('address')>true</#if>"/>
-                                                    <p id="form-error-address" class="contact-form-error">Address is
-                                                        required</p>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <!--previous && next buttons-->
-                                        <div class="field" style="margin-top: 2rem; margin-bottom: 1rem">
-                                            <nav class="level">
-                                                <!--button previous-->
-                                                <div class="level-left">
-                                                    <div class="level-item">
-                                                        <button type="button"
-                                                                class="button is-rounded is-link is-fullwidth"
-                                                                style="padding-right: 2rem" onclick="update_previous()">
-                                                            <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true"
-                                                                 focusable="false" viewBox="0 0 256 512"
-                                                                 style="width: 1em; height: 1em; vertical-align: -.125em; margin-right: 1rem">
-                                                                <path fill="currentColor"
-                                                                      d="M137.4 406.6l-128-127.1C3.125 272.4 0 264.2 0 255.1s3.125-16.38 9.375-22.63l128-127.1c9.156-9.156 22.91-11.9 34.88-6.943S192 115.1 192 128v255.1c0 12.94-7.781 24.62-19.75 29.58S146.5 415.8 137.4 406.6z"/>
-                                                            </svg>
-                                                            <span>Previous</span>
-                                                        </button>
-                                                    </div>
-                                                </div>
-                                                <!--button next-->
-                                                <div class="level-right">
-                                                    <div class="level-item">
-                                                        <button type="button"
-                                                                class="button is-rounded is-link is-fullwidth"
-                                                                style="padding-left: 2rem" onclick="update_next()">
-                                                            <span>Next</span>
-                                                            <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true"
-                                                                 focusable="false" viewBox="0 0 256 512"
-                                                                 style="width: 1em; height: 1em; vertical-align: -.125em; margin-left: 1rem">
-                                                                <path fill="currentColor"
-                                                                      d="M118.6 105.4l128 127.1C252.9 239.6 256 247.8 256 255.1s-3.125 16.38-9.375 22.63l-128 127.1c-9.156 9.156-22.91 11.9-34.88 6.943S64 396.9 64 383.1V128c0-12.94 7.781-24.62 19.75-29.58S109.5 96.23 118.6 105.4z"/>
-                                                            </svg>
-                                                        </button>
-                                                    </div>
-                                                </div>
-                                            </nav>
-                                        </div>
-                                    </div>
-                                    <progress title="2/4" class="progress myprogress" value="2" max="4">50%
-                                    </progress>
-                                </div>
-                            </div>
-                            <!--text box-->
-                            <div class="column align-items-center">
-                                <div class="container m-4 is-white">
-                                    <div class="content has-text-justified">
-                                        <p>
-                                            Please provide your institutional address.
-                                        </p>
-                                        <p>
-                                            It will enable our Data Stewards to provide you with the personnel on-site
-                                            support you deserve. 
-                                        </p>
-                                        <p>
-                                            This way, we can assure that you don't miss any of the DataPLANT events,
-                                            such as onboardings, workshops or summer schools.
-                                        </p>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-
-
-                    <!--END 2nd card ui-->
-                    <!--4rd card ui-->
-                    <div id="card3" style="display: none">
                         <div class="columns">
                             <div class="column align-items-top pb-5">
                                 <div class="container box has-bg-white m-4 p-0">
@@ -376,6 +192,24 @@
                                             Affiliation details
                                         </h1>
                                         <!--input fields-->
+
+
+                                        <div class="field">
+                                            <div class="${properties.kcFormGroupClass!}">
+                                                <div class="${properties.kcInputWrapperClass!}">
+                                                    <input type="text" id="institution"
+                                                           class="${properties.kcInputClass!} input is-rounded"
+                                                           id="user.attributes.institution" placeholder="Institution"
+                                                           name="user.attributes.institution"
+                                                            <#--                                                           value="${(register.formData['user.attributes.institution']!'')}"-->
+                                                           value="${(user.attributes.institution!'')}"
+                                                           aria-invalid="<#if messagesPerField.existsError('institution')>true</#if>"/>
+                                                    <p id="form-error-institution" class="contact-form-error">Last name
+                                                        is required</p>
+                                                </div>
+                                            </div>
+                                        </div>
+
 
                                         <div class="field">
                                             <div class="${properties.kcFormGroupClass!}">
@@ -443,7 +277,8 @@
                                                             whitelist: whitelist,
                                                             originalInputValueFormat: valuesArr => valuesArr.map(item => item.value).join(','),
                                                             maxTags: 10,
-                                                            userInput: false,
+                                                            userInput: true,
+                                                            enforceWhitelist: false,
                                                             dropdown: {
                                                                 maxItems: 20,
                                                                 classname: "tags-look",
@@ -527,7 +362,7 @@
                                             </nav>
                                         </div>
                                     </div>
-                                    <progress title="4/4" class="progress myprogress" value="4" max="4">100%
+                                    <progress title="2/2" class="progress myprogress" value="2" max="2">100%
                                     </progress>
 
                                 </div>

@@ -177,11 +177,10 @@ function next() {
             // }
 
             if (questions[i] == 'card2') {
-                console.log("is card4")
+                let institution = document.getElementById("institution").value;
                 let consortium = document.getElementById("consortium").value;
                 let research = document.getElementById("tagger").value;
                 let role = document.getElementById("role").value;
-                let institution = document.getElementById("institution").value;
 
                 if (institution == "") {
                     document.getElementById("form-error-institution").style.display =
@@ -195,7 +194,6 @@ function next() {
 
 
                 if (consortium == "") {
-                    console.log("1")
                     document.getElementById("form-error-consortium").style.display =
                         "block";
                     // return false;
@@ -206,7 +204,6 @@ function next() {
                 }
 
                 if (research == "") {
-                    console.log("1")
                     document.getElementById("form-error-research").style.display =
                         "block";
                     // return false;
@@ -218,7 +215,6 @@ function next() {
 
 
                 if (role == "") {
-                    console.log("1")
                     document.getElementById("form-error-role").style.display =
                         "block";
                     // return false;
