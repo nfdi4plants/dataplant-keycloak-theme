@@ -1,5 +1,5 @@
-let showing = [1, 0, 0, 0];
-let questions = ['card1', 'card2', 'card3', 'card4'];
+let showing = [1, 0, 0];
+let questions = ['card1', 'card2', 'card3'];
 console.log("loaded reg cards.js")
 
 function validateEmail(email) {
@@ -83,18 +83,107 @@ function next() {
 
             }
 
+            // if (questions[i] == 'card2') {
+            //     console.log("is card2")
+            //     let institution = document.getElementById("institution").value;
+            //     let department = document.getElementById("department").value;
+            //     let country = document.getElementById("country").value;
+            //     let state = document.getElementById("state").value;
+            //     let zipcode = document.getElementById("zipcode").value;
+            //     let city = document.getElementById("city").value;
+            //     let address = document.getElementById("address").value;
+            //
+            //     if (institution == "") {
+            //         console.log("1")
+            //         document.getElementById("form-error-institution").style.display =
+            //             "block";
+            //         // return false;
+            //     }
+            //     else {
+            //         document.getElementById("form-error-institution").style.display =
+            //             "none";
+            //     }
+            //
+            //     if (department == "") {
+            //         console.log("1")
+            //         document.getElementById("form-error-department").style.display =
+            //             "block";
+            //         // return false;
+            //     }
+            //     else {
+            //         document.getElementById("form-error-department").style.display =
+            //             "none";
+            //     }
+            //
+            //     if (country == "") {
+            //         console.log("1")
+            //         document.getElementById("form-error-country").style.display =
+            //             "block";
+            //         // return false;
+            //     }
+            //     else {
+            //         document.getElementById("form-error-country").style.display =
+            //             "none";
+            //     }
+            //
+            //     if (state == "") {
+            //         console.log("1")
+            //         document.getElementById("form-error-state").style.display =
+            //             "block";
+            //         // return false;
+            //     }
+            //     else {
+            //         document.getElementById("form-error-state").style.display =
+            //             "none";
+            //     }
+            //
+            //     if (zipcode == "") {
+            //         console.log("1")
+            //         document.getElementById("form-error-zipcode").style.display =
+            //             "block";
+            //         // return false;
+            //     }
+            //     else {
+            //         document.getElementById("form-error-zipcode").style.display =
+            //             "none";
+            //     }
+            //
+            //     if (city == "") {
+            //         console.log("1")
+            //         document.getElementById("form-error-city").style.display =
+            //             "block";
+            //         // return false;
+            //     }
+            //     else {
+            //         document.getElementById("form-error-city").style.display =
+            //             "none";
+            //     }
+            //
+            //     if (address == "") {
+            //         console.log("1")
+            //         document.getElementById("form-error-address").style.display =
+            //             "block";
+            //         // return false;
+            //     }
+            //     else {
+            //         document.getElementById("form-error-address").style.display =
+            //             "none";
+            //     }
+            //
+            //     if (!institution || !department || !country || !state || !zipcode || !city || !address){
+            //         return false;
+            //     }
+            //
+            // }
+
             if (questions[i] == 'card2') {
-                console.log("is card2")
+                console.log("is card4")
+                let consortium = document.getElementById("consortium").value;
+                let research = document.getElementById("tagger").value;
+                let role = document.getElementById("role").value;
                 let institution = document.getElementById("institution").value;
-                let department = document.getElementById("department").value;
-                let country = document.getElementById("country").value;
-                let state = document.getElementById("state").value;
-                let zipcode = document.getElementById("zipcode").value;
-                let city = document.getElementById("city").value;
-                let address = document.getElementById("address").value;
 
                 if (institution == "") {
-                    console.log("1")
                     document.getElementById("form-error-institution").style.display =
                         "block";
                     // return false;
@@ -104,77 +193,48 @@ function next() {
                         "none";
                 }
 
-                if (department == "") {
+
+                if (consortium == "") {
                     console.log("1")
-                    document.getElementById("form-error-department").style.display =
+                    document.getElementById("form-error-consortium").style.display =
                         "block";
                     // return false;
                 }
                 else {
-                    document.getElementById("form-error-department").style.display =
+                    document.getElementById("form-error-consortium").style.display =
                         "none";
                 }
 
-                if (country == "") {
+                if (research == "") {
                     console.log("1")
-                    document.getElementById("form-error-country").style.display =
+                    document.getElementById("form-error-research").style.display =
                         "block";
                     // return false;
                 }
                 else {
-                    document.getElementById("form-error-country").style.display =
+                    document.getElementById("form-error-research").style.display =
                         "none";
                 }
 
-                if (state == "") {
+
+                if (role == "") {
                     console.log("1")
-                    document.getElementById("form-error-state").style.display =
+                    document.getElementById("form-error-role").style.display =
                         "block";
                     // return false;
                 }
                 else {
-                    document.getElementById("form-error-state").style.display =
+                    document.getElementById("form-error-role").style.display =
                         "none";
                 }
 
-                if (zipcode == "") {
-                    console.log("1")
-                    document.getElementById("form-error-zipcode").style.display =
-                        "block";
-                    // return false;
-                }
-                else {
-                    document.getElementById("form-error-zipcode").style.display =
-                        "none";
-                }
-
-                if (city == "") {
-                    console.log("1")
-                    document.getElementById("form-error-city").style.display =
-                        "block";
-                    // return false;
-                }
-                else {
-                    document.getElementById("form-error-city").style.display =
-                        "none";
-                }
-
-                if (address == "") {
-                    console.log("1")
-                    document.getElementById("form-error-address").style.display =
-                        "block";
-                    // return false;
-                }
-                else {
-                    document.getElementById("form-error-address").style.display =
-                        "none";
-                }
-
-                if (!institution || !department || !country || !state || !zipcode || !city || !address){
+                if (!role || !consortium || !research){
                     return false;
                 }
 
+
             }
+
 
             if (questions[i] == 'card3') {
                 console.log("is card3")
@@ -227,56 +287,6 @@ function next() {
 
 
             }
-
-            if (questions[i] == 'card4') {
-                console.log("is card4")
-                let consortium = document.getElementById("consortium").value;
-                let research = document.getElementById("tagger").value;
-                let role = document.getElementById("role").value;
-
-
-                if (consortium == "") {
-                    console.log("1")
-                    document.getElementById("form-error-consortium").style.display =
-                        "block";
-                    // return false;
-                }
-                else {
-                    document.getElementById("form-error-consortium").style.display =
-                        "none";
-                }
-
-                if (research == "") {
-                    console.log("1")
-                    document.getElementById("form-error-research").style.display =
-                        "block";
-                    // return false;
-                }
-                else {
-                    document.getElementById("form-error-research").style.display =
-                        "none";
-                }
-
-
-                if (role == "") {
-                    console.log("1")
-                    document.getElementById("form-error-role").style.display =
-                        "block";
-                    // return false;
-                }
-                else {
-                    document.getElementById("form-error-role").style.display =
-                        "none";
-                }
-
-                if (!role || !consortium || !research){
-                    return false;
-                }
-
-
-            }
-
-
 
             console.log("elem", qElems[i])
             console.log("show", showing[i])
