@@ -393,6 +393,18 @@
                                     <div class="field">
 
                                         <div class="col-sm-2 col-md-2">
+                                            <label for="user.attributes.institution" class="control-label">Institution</label> <span
+                                                    class="required">*</span>
+                                        </div>
+                                        <input class="form-control input is-rounded" type="text" placeholder="Institution"
+                                               id="user.attributes.institution" name="user.attributes.institution"
+                                               value="${(account.attributes.institution!'')}"/>
+                                    </div>
+
+
+                                    <div class="field">
+
+                                        <div class="col-sm-2 col-md-2">
                                             <label for="user.attributes.affiliation" class="control-label">Affiliation</label> <span
                                                     class="required">*</span>
                                         </div>
@@ -460,7 +472,8 @@
                                                     whitelist:whitelist,
                                                     originalInputValueFormat: valuesArr => valuesArr.map(item => item.value).join(','),
                                                     maxTags: 10,
-                                                    userInput: false,
+                                                    userInput: true,
+                                                    enforceWhitelist: false,
                                                     dropdown: {
                                                         maxItems: 20,
                                                         classname: "tags-look",
