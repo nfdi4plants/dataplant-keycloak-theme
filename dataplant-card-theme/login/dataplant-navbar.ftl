@@ -1,4 +1,4 @@
-<nav class="navbar is-fixed-top has-bg-darkblue">
+<nav class="navbar has-bg-darkblue">
     <div class="navbar-brand">
         <a class="navbar-item" href="https://nfdi4plants.org">
             <img src="${url.resourcesPath}/img/dataplant-logo-small.svg" alt="Logo" width="32" height="32">
